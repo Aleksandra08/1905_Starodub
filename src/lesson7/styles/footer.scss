@@ -1,0 +1,55 @@
+@import "variables.scss";
+@import './mixin';
+
+.footer__title {
+  font-size: $base-font-size;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #031d5b;
+  top: 200px;
+}
+
+.footer {
+  @include pageContainer;
+}
+
+.footer-img {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-img__icon {
+  padding: 10px;
+  margin: 100px 25px;
+  width: 260px;
+}
+
+.footer__sign {
+  margin-top: 180px;
+  font-size: $base-font-size;
+  line-height: 2;
+  text-align: center;
+  color: #5b6c94;
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  color: #5b6c94;
+}
+
+.footer__item {
+  margin: 0 $page-nav-item-margin;
+  display: flex;
+  font-size: $base-font-size;
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+.footer__line {
+  margin-top: 50px;
+}
+

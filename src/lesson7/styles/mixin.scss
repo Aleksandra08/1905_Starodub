@@ -1,0 +1,94 @@
+@import './variables';
+
+$xs-screen: 480px;
+$sm-screen: 720px;
+$md-screen: 980px;
+$lg-screen: 1366px;
+$xl-screen: 1920px;
+
+@mixin xs-mobile {
+  @media (max-width: #{$xs-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$sm-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$md-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: #{$lg-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: #{$xl-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin desktop-lg {
+  @media (min-width: #{$xl-screen - 0.1px}) {
+    @content;
+  }
+}
+
+@mixin pageContainer {
+  max-width: 1257px;
+  margin: 0 auto;
+  padding: 0 $page-container-padding;
+}
+
+@mixin flexCenterVertical {
+  display: flex;
+  align-items: center;
+}
+
+@mixin periodContainer {
+  border: solid 1px #aefdd9;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2px;
+  color: #6fdeaa;
+  padding-top: 20px;
+}
+
+@mixin reviewsPosition {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  margin-top: 260px;
+  border-radius: 6px;
+}
+
+@mixin fontSizeBorder {
+  position: absolute;
+  top: 30px;
+  width: 0px;
+  height: 0px;
+  border-left: 165px solid #E3F6F1;
+  border-top: 200px solid #E3F6F1;
+  border-bottom: 200px solid transparent;
+}
+
+@mixin figursSizeBorder {
+  display: inline-flex;
+  position: relative;
+  left: 50px;
+  margin-top: 50px;
+  margin-left: 10px;
+  width: 0px;
+  height: 0px;
+}

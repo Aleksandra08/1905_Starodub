@@ -1,0 +1,251 @@
+@import "variables.scss";
+@import './mixin';
+
+.benefits {
+  display: flex;
+  position: relative;
+  margin: 0 auto;
+  bottom: 100px;
+  width: 1257px;
+  height: 420px;
+  border-radius: 10px;
+  background-color: $page-nav-link-color;
+  box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
+
+}
+
+.benefits-security, .benefits-production, .benefits-using {
+  display: inline-flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 300px;
+  margin-left: 79px;
+
+}
+
+.benefits__img {
+  width: 72px;
+  height: 72px;
+  margin-top: 66px;
+
+}
+
+.benefits__title {
+  margin-top: 15px;
+  width: 100%;
+  height: 22px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #031d5b;
+}
+
+.benefits__line {
+  width: 25%;
+  height: 4px;
+  background-color: #1fdb84;
+  border: none;
+
+}
+
+.benefits__text {
+  width: 300px;
+  height: 128px;
+  font-size: $base-font-size;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2;
+  letter-spacing: normal;
+  color: #5b6c94;
+
+}
+
+.global-page__title {
+  margin: 200px auto;
+  width: 810px;
+  height: 128px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 1.6;
+  text-align: center;
+  color: #32325c;
+}
+
+.period {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  height: 60px;
+  text-align: center;
+
+  &__monthly {
+    width: 162px;
+    background-color: #ffffff;
+    @include periodContainer;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+  &__year {
+    width: 470px;
+    background-color: #f1fff8;
+    @include periodContainer;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    border-left: none;
+  }
+}
+
+.subscription {
+  display: flex;
+  justify-content: center;
+  margin-top: 64px;
+  height: 665px;
+  &__starter, &__professional, &__business {
+    width: 378px;
+    text-align: center;
+  }
+}
+
+.subscription__professional {
+  border-top: 3px solid #0a8aff;;
+  box-shadow: 0 7px 24px 0 rgba(83, 83, 83, 0.1);
+  background-color: white;
+}
+
+.subscription__title {
+  height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  color: #32325c;
+  margin-top: 56px;
+  margin-bottom: 31px;
+}
+
+.subscription__price {
+  font-size: 64px;
+  color: #1fdb84;
+}
+
+.subscription__period {
+  font-size: $base-font-size;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  color: #5b6c94;
+
+}
+
+.subscription__text {
+  height: 32px;
+  font-size: $base-font-size;
+  line-height: 2;
+  letter-spacing: 0.2px;
+  color: #5b6c94;
+  margin-top: 60px;
+}
+
+.page-container {
+  display: flex;
+  position: relative;
+  margin: 250px auto;
+  left: 350px;
+  height: 970px;
+  width: 650px;
+  background-color: #313a5a;
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    left: -500px;
+    top: 70px;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #031d5b;
+  }
+}
+
+.page-container__fond-one {
+  left: -520px;
+  @include fontSizeBorder;
+}
+
+.page-container__fond-two {
+  left: -300px;
+  @include fontSizeBorder;
+}
+
+.reviews-white {
+  @include reviewsPosition;
+  left: 200px;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+}
+
+.reviews-green {
+  @include reviewsPosition;
+  left: -250px;
+  background-color: #1fdb84;
+  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+}
+
+.reviews-green:active {
+  background-color: #1fdb84;
+  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+}
+
+.figures {
+  @include figursSizeBorder;
+  border-left: 20px solid #ffffff;
+  border-top: 20px solid #ffffff;
+  border-bottom: 15px solid transparent;
+}
+
+.figures__green {
+  @include figursSizeBorder;
+  border-left: 20px solid #1fdb84;
+  border-top: 20px solid #1fdb84;;
+  border-bottom: 15px solid transparent;
+}
+
+.reviews__text {
+  width: 310px;
+  height: 216px;
+  font-size: 18px;
+  line-height: 2;
+  color: #ffffff;
+  margin-left: 50px;
+  margin-top: 23px;
+}
+
+.reviews__signature {
+  width: 144px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-left: 50px;
+  line-height: 5;
+}
+
+.reviews_dark {
+  color: #5b6c94;
+}
+
+.ovals {
+  margin-left: -200px;
+}
+
+.reviews__oval {
+  display: inline-flex;
+  margin-left: 16px;
+  margin-top: 860px;
+  width: 20px;
+  height: 20px;
+  border: solid 3px #ffffff;
+  border-radius: 13px;
+}
+
+.reviews__oval:hover {
+  background-color: #ffffff;
+}
