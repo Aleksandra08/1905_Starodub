@@ -1,47 +1,92 @@
-<!doctype html>
-<html lang="en"><head><link href="lesson7.css" rel="stylesheet"></head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>lesson 7 </title>
-    <header class="page-header">
-        <nav class="page-nav">
-            <h1 class="logo">autocryp</h1>
-            <button class="page-nav__toggle">
-              test
-            </button>
-            <ul class="page-nav__menu">
-                <li class="page-nav__item">
-                    <a href="#" class="page-nav__link">
-                        <span class="page-nav__link-title">
-                            Test
-                        </span>
-                    </a>
-                </li>
-                <li class="page-nav__item">
-                    <a href="#" class="page-nav__link">
-                        <span class="page-nav__link-title">
-                            Test
-                        </span>
-                    </a>
-                </li>
-            </ul>
-            <div class="account-panel">
-                <button class="account-panel__btn btn">Login</button>
-                <button class="account-panel__btn btn_success">Register</button>
-            </div>
-        </nav>
-        <div class="baner">
-            <div class="banner__info"></div>
-            <figure class="banner__img"></figure>
-
-        </div>
-    </header>
-    <section class="benefits"></section>
-
-<body>
-
-<script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="lesson7.js"></script></body>
-</html>
+<head><link href="lesson7.css" rel="stylesheet"></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: Error: Can't resolve './assets/images/Fastest_mining.png' in   'D:\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/Fastest_mining.png' in 'D:\Web\19.05\Лек  ции\webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/Secure_every_transacti  on.png' in 'D:\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/Secure_every_transaction.png' in 'D:\Web  \19.05\Лекции\webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/amazon_logo.png' in 'D  :\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/amazon_logo.png' in 'D:\Web\19.05\Лекции  \webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/clickbank_logo.png' in   'D:\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/clickbank_logo.png' in 'D:\Web\19.05\Лек  ции\webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/easiest.png' in 'D:\We  b\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/easiest.png' in 'D:\Web\19.05\Лекции\web  pack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/etsy_logo.png' in 'D:\  Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/etsy_logo.png' in 'D:\Web\19.05\Лекции\w  ebpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/kickstarter_logo.png'   in 'D:\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/kickstarter_logo.png' in 'D:\Web\19.05\Л  екции\webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/medium_logo.png' in 'D  :\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/medium_logo.png' in 'D:\Web\19.05\Лекции  \webpack_seed\src\lesson7'
+  Module not found: Error: Can't resolve './assets/images/youtube_logo.png' in '  D:\Web\19.05\Лекции\webpack_seed\src\lesson7':
+  Error: Can't resolve './assets/images/youtube_logo.png' in 'D:\Web\19.05\Лекци  и\webpack_seed\src\lesson7'
+  
+  - compiler.js:76 
+    [webpack_seed]/[html-webpack-plugin]/lib/compiler.js:76:16
+  
+  - Compiler.js:300 compile
+    [webpack_seed]/[webpack]/lib/Compiler.js:300:11
+  
+  - Compiler.js:510 applyPluginsAsync.err
+    [webpack_seed]/[webpack]/lib/Compiler.js:510:14
+  
+  - Tapable.js:202 next
+    [webpack_seed]/[tapable]/lib/Tapable.js:202:11
+  
+  - CachePlugin.js:78 Compiler.<anonymous>
+    [webpack_seed]/[webpack]/lib/CachePlugin.js:78:5
+  
+  - Tapable.js:206 Compiler.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:206:13
+  
+  - Compiler.js:507 compilation.seal.err
+    [webpack_seed]/[webpack]/lib/Compiler.js:507:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:683 applyPluginsAsync.err
+    [webpack_seed]/[webpack]/lib/Compilation.js:683:19
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:674 applyPluginsAsync.err
+    [webpack_seed]/[webpack]/lib/Compilation.js:674:11
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:669 applyPluginsAsync.err
+    [webpack_seed]/[webpack]/lib/Compilation.js:669:10
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:665 applyPluginsAsyncSeries
+    [webpack_seed]/[webpack]/lib/Compilation.js:665:9
+  
+  - Tapable.js:195 Compilation.applyPluginsAsyncSeries
+    [webpack_seed]/[tapable]/lib/Tapable.js:195:46
+  
+  - Compilation.js:608 Compilation.seal
+    [webpack_seed]/[webpack]/lib/Compilation.js:608:8
+  
+  - Compiler.js:504 applyPluginsParallel.err
+    [webpack_seed]/[webpack]/lib/Compiler.js:504:17
+  
+  - Tapable.js:289 
+    [webpack_seed]/[tapable]/lib/Tapable.js:289:11
+  
+  - Compilation.js:511 _addModuleChain
+    [webpack_seed]/[webpack]/lib/Compilation.js:511:11
+  
+  - Compilation.js:481 processModuleDependencies.err
+    [webpack_seed]/[webpack]/lib/Compilation.js:481:14
+  
+  - next_tick.js:131 _combinedTickCallback
+    internal/process/next_tick.js:131:7
+  
+  - next_tick.js:180 process._tickCallback
+    internal/process/next_tick.js:180:9
+  
+</pre><script type="text/javascript" src="vendors.js"></script><script type="text/javascript" src="lesson7.js"></script>
