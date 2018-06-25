@@ -1,13 +1,18 @@
 @import './variables';
 @import './mixin';
 
+.global-page {
+  display: flex;
+  flex-direction: column;
+}
+
 .page-header {
   background-color: $background-dark;
-  @include mobile {
-    background-color: green;
-  }
   @include tablet {
-    background-color: yellow;
+    background-color: seagreen;
+  }
+  @include xs-mobile {
+    background-color: darkgrey;
   }
 }
 
@@ -16,33 +21,65 @@
   display: flex;
   justify-content: space-between;
   @include pageContainer;
+  @include tablet {
+    display: flex;
+    justify-content: center;
+  }
+
   &__logo {
     color: $page-nav-link-color;
     font-size: $logo-font-size;
     @include flexCenterVertical;
-    font-weight: normal;
-  }
-  &__toggle {
-    display: none;
+    @include xs-mobile {
+      position: absolute;
+      font-size: 20px;
+      margin-left: 135px;
+      margin-top: 15px;
+    }
   }
   &__menu {
     display: flex;
     justify-content: center;
+    @include xs-mobile {
+      margin: 15px 5px;
+      position: absolute;
+      margin-left: -20px;
+    }
+  }
+  &__toggle {
+    display: none;
+    @include xs-mobile {
+      display: flex;
+      position: absolute;
+      margin-left: -165px;
+      margin-top: 10px;
+      height: 30px;
+      width: 30px;
+    }
   }
   &__item {
     margin: 0 $page-nav-item-margin;
     display: flex;
+    @include xs-mobile {
+      margin: 0px;
+      padding: 5px;
+    }
   }
+
   &__link {
     color: $page-nav-link-color;
     @include flexCenterVertical;
     justify-content: center;
   }
 }
-
 .account-panel {
   display: flex;
   align-items: center;
+  @include xs-mobile {
+    position: absolute;
+    margin-left: -100px;
+    margin-top: 70px;
+  }
   &__btn {
     margin: 0;
   }
@@ -53,6 +90,11 @@
   justify-content: space-between;
   color: $page-nav-link-color;
   @include pageContainer;
+  @include xs-mobile {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
 
   &__main {
     width: 512px;
@@ -60,6 +102,11 @@
     font-size: 48px;
     line-height: normal;
     margin-top: 125px;
+    @include xs-mobile {
+      width: 50%;
+      margin-top: 25%;
+      font-size: 30px;
+    }
   }
   &__text {
     margin-top: 40px;
@@ -67,6 +114,11 @@
     height: 128px;
     font-size: $base-font-size;
     line-height: 2;
+    @include xs-mobile {
+      height: 100%;
+      width: 100%;
+      margin-top: 70px;
+    }
   }
   &__img {
     height: 792px;
@@ -75,5 +127,16 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    @include tablet {
+      height: 500px;
+      margin-bottom: 100px;
+    }
+    @include xs-mobile {
+      position: absolute;
+      margin-left: 200px;
+      margin-top: 15px;
+      width: 150px;
+      background-position: top;
+    }
   }
 }

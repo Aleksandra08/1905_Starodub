@@ -11,7 +11,19 @@
   border-radius: 10px;
   background-color: $page-nav-link-color;
   box-shadow: 0 10px 34px 0 rgba(210, 210, 210, 0.5);
-
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    width: 50%;
+  }
+  @include xs-mobile {
+    display: flex;
+    height: 400%;
+    width: 100%;
+    margin-top: 25%;
+    padding-bottom: 100px;
+  }
 }
 
 .benefits-security, .benefits-production, .benefits-using {
@@ -20,14 +32,18 @@
   height: 100%;
   width: 300px;
   margin-left: 79px;
-
+  @include tablet {
+    margin-left: 10%;
+  }
+  @include xs-mobile {
+    margin-top: -20px;
+  }
 }
 
 .benefits__img {
   width: 72px;
   height: 72px;
   margin-top: 66px;
-
 }
 
 .benefits__title {
@@ -37,6 +53,7 @@
   font-size: 18px;
   font-weight: 500;
   color: #031d5b;
+
 }
 
 .benefits__line {
@@ -44,31 +61,30 @@
   height: 4px;
   background-color: #1fdb84;
   border: none;
-
 }
 
 .benefits__text {
   width: 300px;
   height: 128px;
   font-size: $base-font-size;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 2;
-  letter-spacing: normal;
   color: #5b6c94;
-
 }
 
 .global-page__title {
   margin: 200px auto;
   width: 810px;
-  height: 128px;
   font-size: 40px;
-  font-weight: bold;
   line-height: 1.6;
   text-align: center;
   color: #32325c;
+  @include tablet {
+    width: 80%;
+    margin-top: auto;
+  }
+  @include xs-mobile {
+    width: 80%;
+  }
 }
 
 .period {
@@ -77,6 +93,11 @@
   margin: auto;
   height: 60px;
   text-align: center;
+  @include xs-mobile {
+    margin-top: -200px;
+    width: 90%;
+    height: 30%;
+  }
 
   &__monthly {
     width: 162px;
@@ -100,9 +121,22 @@
   justify-content: center;
   margin-top: 64px;
   height: 665px;
+  @include xs-mobile {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+  }
   &__starter, &__professional, &__business {
     width: 378px;
     text-align: center;
+    @include tablet {
+      width: 50%;
+      margin-left: 1%;
+    }
+    @include xs-mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -116,7 +150,6 @@
   height: 32px;
   font-size: 24px;
   font-weight: bold;
-  font-style: normal;
   color: #32325c;
   margin-top: 56px;
   margin-bottom: 31px;
@@ -132,7 +165,6 @@
   line-height: 2;
   letter-spacing: 0.2px;
   color: #5b6c94;
-
 }
 
 .subscription__text {
@@ -152,6 +184,15 @@
   height: 970px;
   width: 650px;
   background-color: #313a5a;
+  @include tablet {
+    width: 54%;
+    margin-left: 0%;
+  }
+  @include xs-mobile {
+    top: 1500px;
+    width: 100%;
+    margin-left: -350px;
+  }
 
   &__title {
     position: relative;
@@ -162,17 +203,41 @@
     font-weight: 500;
     line-height: 1.2;
     color: #031d5b;
+    @include tablet {
+      margin-left: 170px;
+      font-size: 35px;
+    }
+    @include xs-mobile {
+      position: absolute;
+      margin-left: 530px;
+      margin-top: -20px;
+      font-size: 25px;
+    }
   }
 }
 
 .page-container__fond-one {
   left: -520px;
   @include fontSizeBorder;
+  @include tablet {
+    margin-left: 40%;
+  }
 }
 
 .page-container__fond-two {
   left: -300px;
   @include fontSizeBorder;
+  @include tablet {
+    margin-left: 29%;
+  }
+  @include xs-mobile {
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -30px;
+    width: 60%;
+    border-left: 265px solid #E3F6F1;
+    border-top: 120px solid #E3F6F1;
+  }
 }
 
 .reviews-white {
@@ -180,6 +245,17 @@
   left: 200px;
   background-color: rgba(255, 255, 255, 0.95);
   box-shadow: 12px 12px 40px 0 rgba(121, 121, 121, 0.3);
+  @include tablet {
+    margin-left: -160px;
+    width: 85%;
+  }
+  @include xs-mobile {
+    height: 420px;
+    width: 100%;
+    position: absolute;
+    margin-left: -200px;
+    margin-top: 180px;
+  }
 }
 
 .reviews-green {
@@ -187,11 +263,17 @@
   left: -250px;
   background-color: #1fdb84;
   box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
-}
-
-.reviews-green:active {
-  background-color: #1fdb84;
-  box-shadow: 12px 12px 40px 0 rgba(31, 219, 132, 0.5);
+  @include tablet {
+    margin-left: -80px;
+    width: 85%;
+  }
+  @include xs-mobile {
+    width: 100%;
+    height: 420px;
+    position: absolute;
+    margin-top: 630px;
+    margin-left: 250px;
+  }
 }
 
 .figures {
@@ -230,10 +312,19 @@
 
 .reviews_dark {
   color: #5b6c94;
-}
+  }
 
 .ovals {
   margin-left: -200px;
+  @include tablet {
+    margin-left: -270px;
+    margin-top: -50px;
+  }
+  @include xs-mobile {
+    position: absolute;
+    margin-left: 80px;
+    margin-top: -710px;
+  }
 }
 
 .reviews__oval {
@@ -244,8 +335,14 @@
   height: 20px;
   border: solid 3px #ffffff;
   border-radius: 13px;
+  @include xs-mobile {
+    border: solid 3px #031d5b;
+  }
 }
 
 .reviews__oval:hover {
   background-color: #ffffff;
+  @include xs-mobile {
+    background-color: #031d5b;
+  }
 }

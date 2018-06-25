@@ -8,14 +8,22 @@
   border-top-left-radius: $btn-default-border-radius;
   border-bottom-right-radius: $btn-default-border-radius;
   font-size: $base-font-size;
+
   &_success {
     background-color: #1fdb84;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+
   }
   &_get {
     width: 200px;
     background-color: #1fdb84;
     box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+    @include xs-mobile {
+      width: 50%;
+      height: 50%;
+      margin-top: 10px;
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -23,4 +31,8 @@
   margin-top: 230px;
   width: 255px;
   height: 60px;
+  @include tablet {
+    width: 90%;
+  }
+
 }
