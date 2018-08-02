@@ -1,7 +1,13 @@
 .global__header  {
-  background-image: url('./assets/logoo.gif');
-  background-repeat: repeat;
   height: 600px;
+}
+.global__header_fond {
+  position: absolute;
+  width: 550px;
+  height: 225px;
+ margin-top: 270px;
+  margin-left: 500px;
+  opacity: 0.2;
 }
 
 .header__logo {
@@ -17,7 +23,6 @@
 .header__menu {
   margin-top: 48px;
   margin-left: 7%;
-
 }
 
 .topnav__link {
@@ -45,6 +50,11 @@
   .header__menu {
     margin-left: 15%;
   }
+  .global__header_fond {
+    width: 40%;
+    height: 25%;
+    margin-top: 30%;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
@@ -53,6 +63,11 @@
   }
   .header__menu {
     margin-left: 4%;
+  }
+  .global__header_fond {
+    width: 40%;
+    height: 20%;
+    margin-top: 35%;
   }
 }
 
@@ -95,5 +110,10 @@
     max-width: 100%;
     height: auto;
   }
-
+  .global__header_fond {
+    width: 40%;
+    height: 20%;
+    margin-top: 53%;
+    margin-left: 43%;
+  }
 }
