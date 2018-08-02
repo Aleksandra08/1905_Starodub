@@ -1,0 +1,41 @@
+.main-caption {
+  color: #FFFFFF;
+  font-size: 30px;
+  margin-left: 10%;
+  margin-top: 260px;
+  width: 50%;
+
+}
+
+.main-caption__underline {
+  display: block;
+  width: 20%;
+  height: 10px;
+  margin-left: 10%;
+  border-radius: 5px;
+  background-color: #00E676;
+  position: absolute;
+  left: 0;
+  transition: transform 0.5s;
+  transform-origin: 1% center;
+  transform: scaleX(0);
+}
+
+.main-caption:hover .main-caption__underline {
+  transform: scaleX(0.5);
+  transform-origin: 0% center;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .main-caption {
+    width: 100%;
+
+  }
+}
+@media screen and (max-width: 410px) {
+  .main-caption {
+    width: 100%;
+    font-size: 90%;
+    text-align: left;
+    margin-top: 50%;
+  }
+}

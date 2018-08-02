@@ -1,0 +1,22 @@
+@import "pages/header.scss";
+@import "pages/totalMain.scss";
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  display: flex;
+
+}

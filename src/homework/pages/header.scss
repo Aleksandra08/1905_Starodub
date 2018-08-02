@@ -1,0 +1,99 @@
+.global__header  {
+  background-image: url('./assets/logoo.gif');
+  background-repeat: repeat;
+  height: 600px;
+}
+
+.header__logo {
+  margin-top: 48px;
+  margin-left: 10%;
+
+  &_img {
+    width: 242px;
+    height: 34px;
+  }
+}
+
+.header__menu {
+  margin-top: 48px;
+  margin-left: 7%;
+
+}
+
+.topnav__link {
+  color: #ffffff;
+  text-align: center;
+  padding: 5px 20px;
+}
+
+.topnav__link:hover {
+  border-bottom: 3px solid #00e676;
+
+}
+
+.topnav__icon {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .header__menu {
+    margin-left: 20%;
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+  .header__menu {
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .header__logo {
+    margin-left: 2%;
+  }
+  .header__menu {
+    margin-left: 4%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .topnav__link {
+    display: none;
+  }
+  .topnav__icon {
+    float: right;
+    display: block;
+    color: #FFFFFF;
+    font-size: 25px;
+  }
+  .header__menu {
+    width: 100%;
+  }
+  .topnav.responsive {
+    position: relative;
+    top: 50px;
+    left: -280px;
+  }
+  header.topnav.responsive {
+    height: 340px;
+  }
+  .topnav.responsive .topnav__icon {
+    position: absolute;
+    top: -10px;
+    right: -200px;
+  }
+  .topnav.responsive .topnav__link {
+    display: block;
+    text-align: left;
+  }
+  .header__logo {
+    margin-left: 10px;
+    margin-top: 25px;
+
+  }
+  &_img {
+    max-width: 100%;
+    height: auto;
+  }
+
+}

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 333);
+/******/ 	return __webpack_require__(__webpack_require__.s = 359);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9040,27 +9040,210 @@ module.exports = function (regExp, replace) {
 /* 330 */,
 /* 331 */,
 /* 332 */,
-/* 333 */
+/* 333 */,
+/* 334 */,
+/* 335 */,
+/* 336 */,
+/* 337 */,
+/* 338 */,
+/* 339 */,
+/* 340 */,
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(334);
+module.exports = __webpack_require__(360);
 
 
 /***/ }),
-/* 334 */
+/* 360 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(335);
+__webpack_require__(361);
+
+/* Задача 1 */
+function randomInteger(min, max) {
+    var random = min + (max - min) * Math.random();
+    random = Math.round(random);
+    alert(random);
+}
+
+randomInteger(500, 1000);
+
+/* Задача 2 */
+var user = {
+    name: "Вася",
+    surname: "Петров"
+};
+console.log('My name is ' + user.name + ' my Surname is ' + user.surname);
+
+var name = otherName;
+var otherName = 'Сергей';
+console.log('My name is ' + otherName + ' my Surname is ' + user.surname);
+
+delete user.name;
+console.log(user);
+
+/* Задача 3 */
+function isEmpty(obj) {
+    var counter = 0;
+    for (var key in obj) {
+        counter++;
+    }
+    if (counter === 0) {
+        alert(true); // вместо alert должно быть return
+    } else {
+        alert(false); // вместо alert должно быть return
+    }
+}
+
+isEmpty(user);
+
+/* Задача 4 */
+var salaries = {
+    John: 400,
+    Jack: 200,
+    Denis: 800,
+    test: "dfdd"
+};
+
+function calc(obj) {
+    var sum = 0;
+    for (var key in obj) {
+        // if (!isNaN(obj[key]))
+        //     sum = sum + obj[key];
+        if (typeof obj[key] === "number") {
+            sum = sum + obj[key];
+        }
+    }
+    alert(sum);
+}
+
+calc(salaries);
+
+/* Задача 5 */
+
+function maxSalary(office) {
+    var maxSum = 0;
+    var maxSalaryName = "";
+    for (var _name in office) {
+        if (office[_name] >= maxSum) {
+            maxSum = office[_name];
+            maxSalaryName = _name;
+        }
+    }
+    alert(maxSalaryName);
+}
+
+maxSalary(salaries);
+
+/* Задача 6 */
+
+function multiplyNumeric(object) {
+    for (var key in object) {
+        if (typeof object[key] === 'number') {
+            object[key] = object[key] * 2;
+        }
+    }
+}
+
+multiplyNumeric(salaries);
+
+alert(salaries.Denis);
+
+/* Задача 8 */
+
+function userNumbers() {
+    var numbersArr = [];
+    while (true) {
+        var number = prompt('Enter number', '');
+        if (number === '' || isNaN(number) || number === null) {
+            break;
+        }
+        numbersArr.push(+number);
+    }
+
+    var sum = 0;
+    for (var i = 0; i < numbersArr.length; i++) {
+        sum = sum + numbersArr[i];
+    }
+
+    alert(sum);
+}
+
+userNumbers();
+
+/* Задача 9 */
+
+function find(arr, value) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === value) {
+            alert(i); //вместо alert должно быть return
+        }
+    }
+    alert('-1'); //вместо alert должно быть return
+}
+
+var test = ['one', 'two', 'three', 'four'];
+
+find(test, 'three');
+
+/* Задача 10 */
+
+function filterRange(arr, a, b) {
+    var arrNew = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] > a && arr[i] < b) {
+            arrNew[i] = arr[i];
+        }
+    }
+    arrNew.splice(0, a);
+    alert(arrNew);
+}
+
+var kr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+filterRange(kr, 2, 6);
+
+/* Задача 11 */
+
+function pow(x, n) {
+    var result = x;
+    for (var i = 1; i < n; i++) {
+        result *= result;
+    }
+    alert(result);
+
+    // alert(Math.pow(x, n));
+}
+
+pow(5, 2);
 
 /***/ }),
-/* 335 */
+/* 361 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: \r\n  background: black;\r\n                   ^\r\n      Invalid CSS after \"...kground: black;\": expected \"}\", was \"\"\r\n      in D:\\Web\\19.05\\Лекции\\webpack_seed\\src\\hw1\\hw1.scss (line 2, column 21)\n    at runLoaders (D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\webpack\\lib\\NormalModule.js:195:19)\n    at D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\loader-runner\\lib\\LoaderRunner.js:364:11\n    at D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\loader-runner\\lib\\LoaderRunner.js:230:18\n    at context.callback (D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\loader-runner\\lib\\LoaderRunner.js:111:13)\n    at Object.asyncSassJobQueue.push [as callback] (D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\sass-loader\\lib\\loader.js:55:13)\n    at Object.done [as callback] (D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\neo-async\\async.js:7974:18)\n    at options.error (D:\\Web\\19.05\\Лекции\\webpack_seed\\node_modules\\node-sass\\lib\\index.js:294:32)");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);

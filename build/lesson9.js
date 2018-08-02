@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 342);
+/******/ 	return __webpack_require__(__webpack_require__.s = 365);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9049,86 +9049,143 @@ module.exports = function (regExp, replace) {
 /* 339 */,
 /* 340 */,
 /* 341 */,
-/* 342 */
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */,
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */,
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(343);
+module.exports = __webpack_require__(366);
 
 
 /***/ }),
-/* 343 */
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(344);
+__webpack_require__(367);
 
-var _lighter = __webpack_require__(345);
+var _lighter = __webpack_require__(368);
 
-var lighterElement = document.querySelector('#lighter1');
-var lighterElement2 = document.querySelector('#lighter2');
-var lighterElement3 = document.querySelector('#lighter3');
-(0, _lighter.lighter)(lighterElement);
-(0, _lighter.lighter)(lighterElement2);
-(0, _lighter.lighter)(lighterElement3);
+// const  lighterElement = document.querySelector('#lighter1');
+// const  lighterElement2 = document.querySelector('#lighter2');
+// const  lighterElement3 = document.querySelector('#lighter3');
+// lighter(lighterElement);
+// lighter(lighterElement2);
+// lighter(lighterElement3);
+//
+//
+//
+// function notificationBar() {
+//
+//     const notificationBarElement = document.querySelector('.notification-bar');
+//     const control = document.querySelector('.notification-bar__btn');
+//
+//     console.log(control);
+//     console.log(notificationBarElement);
+//
+//     function toggleMessage() {
+//         notificationBarElement.classList.toggle('notification-bar_active');
+//     }
+//
+//     control.addEventListener('click', toggleMessage);
+// }
+//
+// notificationBar();
+//
+//
+// function box() {
+//     const boxElement1 = document.querySelector('.box__red');
+//     console.log(boxElement1);
+//     const boxElement2 = document.querySelector('.box__yellow');
+//     console.log(boxElement2);
+//     const boxElement3 = document.querySelector('.box__green');
+//     console.log(boxElement3);
+//
+//
+//     function toggleColor1() {
+//         boxElement1.classList.toggle('box__red_active');
+//
+//     }
+//
+//     boxElement1.addEventListener('click', toggleColor1);
+//
+//
+//     function toggleColor2() {
+//         boxElement2.classList.toggle('box__yellow_active');
+//     }
+//
+//     boxElement2.addEventListener('click', toggleColor2);
+//
+//     function toggleColor3() {
+//
+//         boxElement3.classList.toggle('box__green_active');
+//     }
+//
+//     boxElement3.addEventListener('click', toggleColor3);
+//
+// }
+//
+// box();
 
-function notificationBar() {
 
-    var notificationBarElement = document.querySelector('.notification-bar');
-    var control = document.querySelector('.notification-bar__btn');
+var products = [{
+    title: 'Test',
+    price: '2500'
+}, {
+    title: 'Test',
+    price: '2500'
+}, {
+    title: 'Test',
+    price: '2500'
+}];
 
-    console.log(control);
-    console.log(notificationBarElement);
+function calcTotal(arrayOffNumbers) {
+    var total = 0;
+    for (var i = 0; i < arrayOffNumbers.length; i++) {
 
-    function toggleMessage() {
-        notificationBarElement.classList.toggle('notification-bar_active');
+        var number = Number(arrayOffNumbers[i].price);
+        if (isNaN(number) === false) {
+            total += number;
+        }
     }
-
-    control.addEventListener('click', toggleMessage);
+    return total;
 }
 
-notificationBar();
-
-function box() {
-    var boxElement1 = document.querySelector('.box__red');
-    console.log(boxElement1);
-    var boxElement2 = document.querySelector('.box__yellow');
-    console.log(boxElement2);
-    var boxElement3 = document.querySelector('.box__green');
-    console.log(boxElement3);
-
-    function toggleColor1() {
-        boxElement1.classList.toggle('box__red_active');
-    }
-
-    boxElement1.addEventListener('click', toggleColor1);
-
-    function toggleColor2() {
-        boxElement2.classList.toggle('box__yellow_active');
-    }
-
-    boxElement2.addEventListener('click', toggleColor2);
-
-    function toggleColor3() {
-
-        boxElement3.classList.toggle('box__green_active');
-    }
-
-    boxElement3.addEventListener('click', toggleColor3);
-}
-
-box();
+var totalPrice = calcTotal(products);
+console.log(totalPrice);
 
 /***/ }),
-/* 344 */
+/* 367 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 345 */
+/* 368 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9139,7 +9196,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.lighter = lighter;
 
-__webpack_require__(346);
+__webpack_require__(369);
 
 function lighter(lighterElement) {
     var lights = lighterElement.querySelectorAll('.street-lighter__light');
@@ -9176,7 +9233,7 @@ function lighter(lighterElement) {
 function isEmpty(obj) {}
 
 /***/ }),
-/* 346 */
+/* 369 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
