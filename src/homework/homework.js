@@ -1,6 +1,6 @@
 import './homework.scss';
 
-menu.onclick = function openMenu () {
+menu.onclick = function openMenu() {
     let x = document.querySelector('#myTopnav');
 
     if (x.className === 'topnav') {

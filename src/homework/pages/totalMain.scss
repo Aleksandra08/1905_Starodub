@@ -76,19 +76,19 @@
     width: 50%;
     margin: 5%;
   }
-  &__main{
+  &__main {
     width: 100%;
     margin: 5%;
   }
-  &__text{
+  &__text {
     margin: 5%;
   }
 }
+
 .benefits-info {
   width: 280px;
   text-align: center;
 }
-
 
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .main-caption {
@@ -150,7 +150,7 @@
     width: 100%;
   }
   .benefits {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 90%;
     margin-left: 10px;
   }
