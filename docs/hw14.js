@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 383);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9063,24 +9063,97 @@ module.exports = function (regExp, replace) {
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(384);
 
 
 /***/ }),
-/* 357 */
+/* 384 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(358);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(385);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Acc = function () {
+    function Acc(element) {
+        var _this = this;
+
+        _classCallCheck(this, Acc);
+
+        this.element = element;
+        this.render();
+        this.control.addEventListener('click', function () {
+            return _this.openPanel();
+        });
+    }
+
+    _createClass(Acc, [{
+        key: 'openPanel',
+        value: function openPanel() {
+            this.element.classList.add('panel_active');
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            this.control = document.createElement('button');
+            this.output = document.createElement('div');
+
+            this.control.classList.add('accordion');
+            this.output.classList.add('panel');
+
+            this.control.textContent = 'Section 1';
+            this.output.textContent = '<p> Lorem ipsum...</p>';
+
+            this.element.classList.add('accord');
+
+            this.element.appendChild(this.control);
+            this.element.appendChild(this.output);
+        }
+    }]);
+
+    return Acc;
+}();
+
+var acc = new Acc(document.querySelector('#accord'));
 
 /***/ }),
-/* 358 */
+/* 385 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

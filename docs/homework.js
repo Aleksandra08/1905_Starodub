@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 403);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9063,24 +9063,98 @@ module.exports = function (regExp, replace) {
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */,
+/* 403 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(404);
 
 
 /***/ }),
-/* 357 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(358);
+__webpack_require__(405);
+
+menu.onclick = function openMenu() {
+    var x = document.querySelector('#myTopnav');
+
+    if (x.className === 'topnav') {
+        x.className += ' responsive';
+    } else {
+        x.className = 'topnav';
+    }
+};
+
+$(document).ready(function () {
+    $(".about__astronomy__content").hide();
+
+    $(".about__astronomy__btn").on("click", function (e) {
+
+        var $this = $(this).prev('.about__astronomy__content');
+        var $text = $(this);
+        $this.slideToggle('slow', function () {
+            if ($(this).is(':visible')) {
+                $text.text('LESS INFO');
+            } else {
+                $text.text('LEARN MORE');
+            }
+        });
+    });
+});
 
 /***/ }),
-/* 358 */
+/* 405 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

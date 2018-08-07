@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 386);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9040,7 +9040,71 @@ module.exports = function (regExp, replace) {
 /* 330 */,
 /* 331 */,
 /* 332 */,
-/* 333 */,
+/* 333 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Ajax = exports.Ajax = function () {
+    function Ajax() {
+        _classCallCheck(this, Ajax);
+    }
+
+    _createClass(Ajax, null, [{
+        key: 'get',
+
+        //запрос данных с сервера
+        value: function get(url, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url);
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200 || xhr.status === 304) {
+                        var list = JSON.parse(xhr.response);
+                        successCallback(list);
+                    } else {
+                        errorCallback(xhr);
+                    }
+                }
+            };
+        }
+    }, {
+        key: 'delete',
+        value: function _delete(url, data, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('DELETE', url);
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200 || xhr.status === 304) {
+                        var list = JSON.parse(xhr.response);
+                        successCallback(list);
+                    } else {
+                        errorCallback(xhr);
+                    }
+                }
+            };
+        }
+    }]);
+
+    return Ajax;
+}();
+
+/***/ }),
 /* 334 */,
 /* 335 */,
 /* 336 */,
@@ -9063,27 +9127,168 @@ module.exports = function (regExp, replace) {
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(387);
 
 
 /***/ }),
-/* 357 */
+/* 387 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(358);
+var _taskList = __webpack_require__(388);
+
+var list = new _taskList.TaskList(document.querySelector('.test'));
+
+// // const someTemplate = '<div class="parent">Hello world</div>';
+// const test = document.querySelector('.test');
+//
+// function generateTemplate(name,age) {
+//     return '<h1 class="header">${name} ${age}</h1>'
+// }
+// test.innerHTML = generateTemplate('Sasha', 26);
+//
+// // test.innerHTML = someTemplate;
+// test.addEventListener('click', () =>{
+//     console.log('Hello world')
+// });
+//
+// alert('hello world');
+//
+// setInterval(() => {
+//     console.log('1 second passed');
+// }, 1000);
+// setInterval(() => {
+//     console.log('1.5 second passed');
+// }, 1500);
 
 /***/ }),
-/* 358 */
-/***/ (function(module, exports) {
+/* 388 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.TaskList = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ajax = __webpack_require__(333);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var TaskList = exports.TaskList = function () {
+    function TaskList(target) {
+        var _this = this;
+
+        _classCallCheck(this, TaskList);
+
+        this.target = target;
+        this.render();
+        _ajax.Ajax.get('http://localhost:4001/list', function (list) {
+            _this.renderList(list);
+        }, function (xhr) {
+            console.error(xhr.status);
+        });
+    }
+
+    _createClass(TaskList, [{
+        key: 'sendData',
+        value: function sendData() {
+            var _this2 = this;
+
+            _ajax.Ajax.post('http://localhost:4001/list', {
+                title: this.input.value // отправка данные которые вводит пользователь в Input, запрашиваются через value
+            }, function (resp) {
+                console.log(resp);
+                _this2.renderListItem(resp);
+            }, function (e) {
+                console.error(e);
+            });
+        }
+    }, {
+        key: 'renderListItem',
+        value: function renderListItem(item) {
+            var li = document.createElement('li');
+            li.textContent = item.title;
+            this.ul.appendChild(li);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            this.form = document.createElement('form');
+            this.input = document.createElement('input');
+            this.ul = document.createElement('ul');
+
+            this.input.placeholder = 'Enter task...';
+
+            this.form.addEventListener('submit', function () {
+                console.log(event);
+                event.preventDefault();
+                _this3.sendData();
+            });
+
+            document.addEventListener('contextmenu', function (event) {
+                event.preventDefault();
+            });
+
+            this.form.appendChild(this.input);
+            this.target.appendChild(this.form);
+            this.target.appendChild(this.ul);
+        }
+    }, {
+        key: 'renderList',
+        value: function renderList(list) {
+            var _this4 = this;
+
+            list.forEach(function (item) {
+                _this4.renderListItem(item);
+            });
+        }
+    }]);
+
+    return TaskList;
+}();
 
 /***/ })
 /******/ ]);

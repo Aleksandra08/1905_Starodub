@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 356);
+/******/ 	return __webpack_require__(__webpack_require__.s = 389);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9063,27 +9063,170 @@ module.exports = function (regExp, replace) {
 /* 353 */,
 /* 354 */,
 /* 355 */,
-/* 356 */
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */,
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(357);
+module.exports = __webpack_require__(390);
 
 
 /***/ }),
-/* 357 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(358);
+var _newList = __webpack_require__(391);
+
+var list = new _newList.newList(document.querySelector('.test'));
 
 /***/ }),
-/* 358 */
-/***/ (function(module, exports) {
+/* 391 */
+/***/ (function(module, exports, __webpack_require__) {
 
-// removed by extract-text-webpack-plugin
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.newList = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _ajax = __webpack_require__(392);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var newList = exports.newList = function () {
+    function newList(target) {
+        var _this = this;
+
+        _classCallCheck(this, newList);
+
+        this.target = target;
+        this.render();
+        _ajax.Ajax.get('http://localhost:4001/comments', function (resp) {
+            console.log(resp);
+            _this.renderList(resp);
+        }, function (e) {
+            console.log(e);
+        });
+    }
+
+    _createClass(newList, [{
+        key: 'render',
+        value: function render() {
+            this.ul = document.createElement('ul');
+            this.target.appendChild(this.ul);
+            this.target.addEventListener('click', function () {});
+        }
+    }, {
+        key: 'renderList',
+        value: function renderList(list) {
+            var _this2 = this;
+
+            list.forEach(function (item) {
+                var li = document.createElement('li');
+                var author = document.createElement('div');
+                var date = document.createElement('span');
+                var text = document.createElement('span');
+
+                li.textContent = item.title;
+                author.textContent = item.author;
+                date.textContent = item.date;
+                text.textContent = item.text;
+
+                li.appendChild(author);
+                li.appendChild(date);
+                li.appendChild(text);
+                _this2.ul.appendChild(li);
+            });
+        }
+    }]);
+
+    return newList;
+}();
+
+/***/ }),
+/* 392 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Ajax = exports.Ajax = function () {
+    function Ajax() {
+        _classCallCheck(this, Ajax);
+    }
+
+    _createClass(Ajax, null, [{
+        key: 'get',
+
+        //запрос данных с сервера
+        value: function get(url, successCallback, errorCallback) {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open('GET', url);
+            xhr.send();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status === 200 || xhr.status === 304) {
+                        var list = JSON.parse(xhr.response);
+                        successCallback(list);
+                    } else {
+                        errorCallback(xhr);
+                    }
+                }
+            };
+        }
+    }]);
+
+    return Ajax;
+}();
 
 /***/ })
 /******/ ]);
