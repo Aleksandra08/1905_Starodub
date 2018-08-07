@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 403);
+/******/ 	return __webpack_require__(__webpack_require__.s = 406);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9110,21 +9110,24 @@ module.exports = function (regExp, replace) {
 /* 400 */,
 /* 401 */,
 /* 402 */,
-/* 403 */
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(404);
+module.exports = __webpack_require__(407);
 
 
 /***/ }),
-/* 404 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(405);
+__webpack_require__(408);
 
 menu.onclick = function openMenu() {
     var x = document.querySelector('#myTopnav');
@@ -9136,8 +9139,25 @@ menu.onclick = function openMenu() {
     }
 };
 
+$(document).ready(function () {
+    $(".about__astronomy__content").hide();
+
+    $(".about__astronomy__btn").on("click", function (e) {
+
+        var $this = $(this).prev('.about__astronomy__content');
+        var $text = $(this);
+        $this.slideToggle('slow', function () {
+            if ($(this).is(':visible')) {
+                $text.text('LESS INFO');
+            } else {
+                $text.text('LEARN MORE');
+            }
+        });
+    });
+});
+
 /***/ }),
-/* 405 */
+/* 408 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

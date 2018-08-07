@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 386);
+/******/ 	return __webpack_require__(__webpack_require__.s = 389);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9157,21 +9157,24 @@ var Ajax = exports.Ajax = function () {
 /* 383 */,
 /* 384 */,
 /* 385 */,
-/* 386 */
+/* 386 */,
+/* 387 */,
+/* 388 */,
+/* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(387);
+module.exports = __webpack_require__(390);
 
 
 /***/ }),
-/* 387 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _taskList = __webpack_require__(388);
+var _taskList = __webpack_require__(391);
 
 var list = new _taskList.TaskList(document.querySelector('.test'));
 
@@ -9198,7 +9201,7 @@ var list = new _taskList.TaskList(document.querySelector('.test'));
 // }, 1500);
 
 /***/ }),
-/* 388 */
+/* 391 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
