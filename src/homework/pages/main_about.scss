@@ -31,26 +31,25 @@
   transform-origin: 0 center;
 }
 
-.about__astronomy {
+.about-astronomy {
   margin-left: 10%;
   width: 1200px;
-
 }
 
-.about__astronomy__img {
+.about-astronomy__img {
   width: 50%;
   margin-left: 400px;
   margin-top: -100px;
 }
 
-.about__astronomy_text {
+.about-astronomy__text {
   color: #FFFFFF;
   margin-top: -430px;
 }
 
-.about__astronomy__content {
+.about-astronomy__content {
   color: #FFFFFF;
-  background-color: #00e676;
+  background-color: black;
   width: 37%;
   margin-top: 10px;
   font-size: 12px;
@@ -59,29 +58,31 @@
 .benefits-title {
   color: #FFFFFF;
   position: absolute;
-  margin-top: 750px;
+  margin-top: 200px;
   margin-left: 10%;
 }
 
 .benefits {
-  position: absolute;
-  margin-top: 800px;
+  margin-top: 250px;
   margin-left: 250px;
   color: #FFFFFF;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: stretch;
 
   &__img {
     width: 50%;
     margin: 5%;
   }
   &__main {
-    width: 100%;
     margin: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px;
   }
   &__text {
     margin: 5%;
+    font-size: 18px;
   }
 }
 
@@ -99,20 +100,20 @@
     height: 10%;
     margin: 25% 35%;
   }
-  .about__astronomy {
+  .about-astronomy {
     width: 90%;
     margin: auto;
 
-    &_img {
-      margin: auto;
+    &__img {
+      margin: auto 130px;
       width: 90%;
     }
-    &_text {
+    &__text {
       margin-top: -50%;
       width: 90%;
     }
   }
-  .about__astronomy__content {
+  .about-astronomy__content {
     width: 70%;
   }
   .benefits {
@@ -134,24 +135,26 @@
     height: 10%;
     margin: 10% 35%;
   }
-  .about__astronomy {
+  .about-astronomy {
     width: 90%;
     margin: auto;
-    &_text {
+    &__text {
       margin-top: -80%;
       width: 100%;
+      margin-left: 10px;
     }
-  }
-  .about__astronomy__img {
-    width: 100%;
-    margin: auto;
-  }
-  .about__astronomy__content {
-    width: 100%;
+    &__img {
+      width: 100%;
+      margin: auto;
+    }
+    &__content {
+      width: 100%;
+      margin-left: 5px;
+    }
   }
   .benefits {
     flex-wrap: wrap;
     width: 90%;
-    margin-left: 10px;
+    margin-left: 50px;
   }
 }

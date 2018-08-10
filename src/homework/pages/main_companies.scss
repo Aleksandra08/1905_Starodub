@@ -1,0 +1,30 @@
+.companies__title {
+  margin-left: 10%;
+  margin-top: 130px;
+  color: #FFFFFF;
+}
+
+.companies__img {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: absolute;
+  justify-content: space-around;
+  padding-top: 61px;
+
+  &_font {
+    width: 33%;
+    height: 34%;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .companies__img {
+    display: flex;
+    flex-direction: column;
+    &_font {
+      width: 100%;
+    }
+  }
+}

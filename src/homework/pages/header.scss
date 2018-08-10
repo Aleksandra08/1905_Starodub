@@ -1,11 +1,23 @@
-.global__header  {
-  height: 600px;
+#header_fix {
+  top: -30px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 15px 0;
 }
-.global__header_fond {
+
+.default {
+  position: fixed;
+  top: 0;
+  background-color: #002E16;
+}
+
+.main-caption__fond {
   position: absolute;
   width: 550px;
   height: 225px;
- margin-top: 270px;
+  margin-top: -150px;
   margin-left: 500px;
   opacity: 0.2;
 }
@@ -22,7 +34,7 @@
 
 .header__menu {
   margin-top: 48px;
-  margin-left: 7%;
+  float: right;
 }
 
 .topnav__link {
@@ -38,21 +50,18 @@
 .topnav__icon {
   display: none;
 }
-
 @media screen and (min-width: 1200px) {
   .header__menu {
     margin-left: 20%;
   }
 }
-
 @media screen and (min-width: 980px) and (max-width: 1199px) {
   .header__menu {
     margin-left: 15%;
   }
-  .global__header_fond {
-    width: 40%;
-    height: 25%;
-    margin-top: 30%;
+  .main-caption__fond {
+    width: 45%;
+    height: 20%;
   }
 }
 
@@ -61,12 +70,12 @@
     margin-left: 2%;
   }
   .header__menu {
-    margin-left: 4%;
+    margin-left: 3%;
   }
-  .global__header_fond {
-    width: 40%;
+  .main-caption__fond {
+    width: 45%;
     height: 20%;
-    margin-top: 35%;
+    margin-left: 45%;
   }
 }
 
@@ -85,8 +94,8 @@
   }
   .topnav.responsive {
     position: relative;
-    top: 50px;
-    left: -280px;
+    top: 20px;
+    left: -250px;
   }
   header.topnav.responsive {
     height: 340px;
@@ -108,10 +117,10 @@
     max-width: 100%;
     height: auto;
   }
-  .global__header_fond {
-    width: 40%;
-    height: 20%;
-    margin-top: 53%;
-    margin-left: 43%;
+  .main-caption__fond {
+    width: 60%;
+    height: 15%;
+    margin-left: 32%;
+    margin-top: -100px;
   }
 }

@@ -9126,6 +9126,17 @@ module.exports = __webpack_require__(404);
 
 __webpack_require__(405);
 
+$(document).ready(function () {
+    $("#header_fix").removeClass('default');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 20) {
+            $("#header_fix").addClass('default').fadeIn('fast');
+        } else {
+            $("#header_fix").removeClass('default').fadeIn('fast');
+        };
+    });
+});
+
 menu.onclick = function openMenu() {
     var x = document.querySelector('#myTopnav');
 
@@ -9137,11 +9148,11 @@ menu.onclick = function openMenu() {
 };
 
 $(document).ready(function () {
-    $(".about__astronomy__content").hide();
+    $(".about-astronomy__content").hide();
 
-    $(".about__astronomy__btn").on("click", function (e) {
+    $(".about-astronomy__btn").on("click", function (e) {
 
-        var $this = $(this).prev('.about__astronomy__content');
+        var $this = $(this).prev('.about-astronomy__content');
         var $text = $(this);
         $this.slideToggle('slow', function () {
             if ($(this).is(':visible')) {
@@ -9150,6 +9161,21 @@ $(document).ready(function () {
                 $text.text('LEARN MORE');
             }
         });
+    });
+});
+
+$(document).ready(function () {
+
+    $("#menu_link").on("click", ".topnav__link", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $("body,html").animate({ scrollTop: top }, 1500);
     });
 });
 

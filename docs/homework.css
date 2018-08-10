@@ -1,11 +1,21 @@
-.global__header {
-  height: 600px; }
+#header_fix {
+  top: -30px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100%;
+  padding: 15px 0; }
 
-.global__header_fond {
+.default {
+  position: fixed;
+  top: 0;
+  background-color: #002E16; }
+
+.main-caption__fond {
   position: absolute;
   width: 550px;
   height: 225px;
-  margin-top: 270px;
+  margin-top: -150px;
   margin-left: 500px;
   opacity: 0.2; }
 
@@ -18,7 +28,7 @@
 
 .header__menu {
   margin-top: 48px;
-  margin-left: 7%; }
+  float: right; }
 
 .topnav__link {
   color: #ffffff;
@@ -38,20 +48,19 @@
 @media screen and (min-width: 980px) and (max-width: 1199px) {
   .header__menu {
     margin-left: 15%; }
-  .global__header_fond {
-    width: 40%;
-    height: 25%;
-    margin-top: 30%; } }
+  .main-caption__fond {
+    width: 45%;
+    height: 20%; } }
 
 @media screen and (min-width: 768px) and (max-width: 979px) {
   .header__logo {
     margin-left: 2%; }
   .header__menu {
-    margin-left: 4%; }
-  .global__header_fond {
-    width: 40%;
+    margin-left: 3%; }
+  .main-caption__fond {
+    width: 45%;
     height: 20%;
-    margin-top: 35%; } }
+    margin-left: 45%; } }
 
 @media screen and (max-width: 767px) {
   .topnav__link {
@@ -65,8 +74,8 @@
     width: 100%; }
   .topnav.responsive {
     position: relative;
-    top: 50px;
-    left: -280px; }
+    top: 20px;
+    left: -250px; }
   header.topnav.responsive {
     height: 340px; }
   .topnav.responsive .topnav__icon {
@@ -82,11 +91,11 @@
   _img {
     max-width: 100%;
     height: auto; }
-  .global__header_fond {
-    width: 40%;
-    height: 20%;
-    margin-top: 53%;
-    margin-left: 43%; } }
+  .main-caption__fond {
+    width: 60%;
+    height: 15%;
+    margin-left: 32%;
+    margin-top: -100px; } }
 
 .main-caption {
   color: #FFFFFF;
@@ -121,22 +130,22 @@
   -ms-transform-origin: 0 center;
       transform-origin: 0 center; }
 
-.about__astronomy {
+.about-astronomy {
   margin-left: 10%;
   width: 1200px; }
 
-.about__astronomy__img {
+.about-astronomy__img {
   width: 50%;
   margin-left: 400px;
   margin-top: -100px; }
 
-.about__astronomy_text {
+.about-astronomy__text {
   color: #FFFFFF;
   margin-top: -430px; }
 
-.about__astronomy__content {
+.about-astronomy__content {
   color: #FFFFFF;
-  background-color: #00e676;
+  background-color: black;
   width: 37%;
   margin-top: 10px;
   font-size: 12px; }
@@ -144,28 +153,30 @@
 .benefits-title {
   color: #FFFFFF;
   position: absolute;
-  margin-top: 750px;
+  margin-top: 200px;
   margin-left: 10%; }
 
 .benefits {
-  position: absolute;
-  margin-top: 800px;
+  margin-top: 250px;
   margin-left: 250px;
   color: #FFFFFF;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -ms-flex-pack: stretch;
+      justify-content: stretch; }
   .benefits__img {
     width: 50%;
     margin: 5%; }
   .benefits__main {
-    width: 100%;
-    margin: 5%; }
+    margin: 5%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 24px; }
   .benefits__text {
-    margin: 5%; }
+    margin: 5%;
+    font-size: 18px; }
 
 .benefits-info {
   width: 280px;
@@ -178,16 +189,16 @@
     width: 10%;
     height: 10%;
     margin: 25% 35%; }
-  .about__astronomy {
+  .about-astronomy {
     width: 90%;
     margin: auto; }
-    .about__astronomy_img {
-      margin: auto;
+    .about-astronomy__img {
+      margin: auto 130px;
       width: 90%; }
-    .about__astronomy_text {
+    .about-astronomy__text {
       margin-top: -50%;
       width: 90%; }
-  .about__astronomy__content {
+  .about-astronomy__content {
     width: 70%; }
   .benefits {
     width: 90%;
@@ -204,30 +215,61 @@
     width: 10%;
     height: 10%;
     margin: 10% 35%; }
-  .about__astronomy {
+  .about-astronomy {
     width: 90%;
     margin: auto; }
-    .about__astronomy_text {
+    .about-astronomy__text {
       margin-top: -80%;
-      width: 100%; }
-  .about__astronomy__img {
-    width: 100%;
-    margin: auto; }
-  .about__astronomy__content {
-    width: 100%; }
+      width: 100%;
+      margin-left: 10px; }
+    .about-astronomy__img {
+      width: 100%;
+      margin: auto; }
+    .about-astronomy__content {
+      width: 100%;
+      margin-left: 5px; }
   .benefits {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     width: 90%;
-    margin-left: 10px; } }
+    margin-left: 50px; } }
 
-.about__astronomy__btn {
+.about-astronomy__btn {
   width: 200px;
   height: 50px;
   border-radius: 40px;
   background-color: #00e676;
   margin-top: 10px;
   margin-left: 40px; }
+
+.companies__title {
+  margin-left: 10%;
+  margin-top: 130px;
+  color: #FFFFFF; }
+
+.companies__img {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  position: absolute;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 61px; }
+  .companies__img_font {
+    width: 33%;
+    height: 34%; }
+
+@media screen and (max-width: 767px) {
+  .companies__img {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column; }
+    .companies__img_font {
+      width: 100%; } }
 
 * {
   margin: 0;
