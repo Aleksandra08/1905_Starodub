@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #3A3E49;
+    background-color: #E2E7ED;
+}
+
+h1 {
+    margin-top: 160px;
+    margin-bottom: 30px;
+
+}
+
+hr.blog_line {
+    width: 70px;
+    margin-left: 1px;
+    background-color: #E97D9D;
+    height: 4px;
+    border-radius: 5px;
+}
+
+h1, h4 {
+    text-align: center;
+}
+
+.search_engine {
+    display: flex;
+    justify-content: space-around;
+    background-image: url("assets/layer 5.jpg");
+    background-size: cover;
+    background-position: center;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+    border: none;
+    height: 500px;
+
+}
+
+.form_input {
+    width: 600px;
+    height: 50px;
+    padding-left: 20px;
+    border: none;
+    border-radius: 5px;
+
+}
+
+button.search {
+    width: 50px;
+    height: 50px;
+    border: 1px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-color: none;
+    background-color: #8D91FF;
+    margin-left: -55px;
+    padding-bottom: 20.5px;
+}
+
+.main_content {
+    height: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.main_content_blog_image {
+    height: 350px;
+    width: 440px;
+    background-image: url("assets/layer 59.jpg");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+
+}
+
+img.owner-photo {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    margin-top: 30px;
+}
+
+.owner-name {
+    position: absolute;
+    font-weight: 600;
+    margin-top: 55px;
+    margin-left: 10px;
+}
+
+img.like-button {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin-top: -70px;
+    margin-left: 310px;
+}
+
+.like {
+    position: absolute;
+    font-weight: 600;
+    margin-top: -72px;
+    margin-left: 340px;
+    color: #8F8F97;
+}
+
+.main_content_blog_text {
+    height: 350px;
+    width: 440px;
+    margin-left: -50px;
+    text-align: justify;
+    padding-top: 45px;
+    padding-left: 40px;
+    padding-right: 30px;
+    line-height: 25px;
+    background-color: white;
+    position: relative;
+
+}
+
+.main_content_blog_text__post {
+    color: #8F8F97;
+}
+
+.main_content_block_coffee {
+    height: 350px;
+    width: 450px;
+    background-image: url("assets/layer 60.jpg");
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.main_content_block_coffee__menu-one {
+    background-color: white;
+    height: 115px;
+    width: 103px;
+    margin-left: 345px;
+    border-bottom-style: solid;
+    border-bottom-color: #C1C2C5;
+    border-bottom-width: thin;
+}
+
+.main_content_block_coffee__menu-two {
+    background-color: white;
+    height: 115px;
+    width: 103px;
+    margin-left: 345px;
+    border-bottom-style: solid;
+    border-bottom-color: #C1C2C5;
+    border-bottom-width: thin;
+}
+
+.main_content_block_coffee__menu-three {
+    background-color: white;
+    height: 117.5px;
+    width: 103px;
+    margin-left: 345px;
+}
+
+img.like-button-coffee {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-top: 50px;
+    margin-left: 37px;
+}
+
+.like-coffee {
+    position: relative;
+    font-weight: 600;
+    margin-top: -700px;
+    margin-left: 33px;
+    color: #8F8F97;
+}
+
+img.chat-button-coffee {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.chat-coffee {
+    position: relative;
+    font-weight: 600;
+    margin-top: -700px;
+    margin-left: 40px;
+    color: #8F8F97;
+}
+
+img.share-button-coffee {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.share-coffee {
+    position: relative;
+    font-weight: 600;
+    margin-top: -700px;
+    margin-left: 40px;
+    color: #8F8F97;
+}
+
+.user-video {
+    height: 520px;
+}
+
+.form {
+    height: 500px;
+    width: 420px;
+    margin-top: 20px;
+}
+
+.form_background {
+    height: 170px;
+    width: 420px;
+    background-image: url("assets/Layer18.jpg.");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
+.form_name {
+    position: absolute;
+    height: 150px;
+    width: 420px;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-color: #C1C2C5;
+    border-bottom-width: thin;
+}
+
+h3 {
+    position: relative;
+    text-align: center;
+    margin-top: 60px;
+    color: #384A5C;
+}
+
+h5 {
+    position: relative;
+    text-align: center;
+    margin-top: -15px;
+    color: #B5B6B9;
+
+}
+
+.ramsay {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 250px;
+    margin-top: -70px;
+    margin-left: 150px;
+}
+
+.form_content {
+    position: relative;
+    margin-top: 150px;
+    height: 180px;
+    width: 420px;
+    background-color: white;
+
+}
+
+.form_content__quantity-fans {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight: 600;
+    color: #384A5C;
+}
+
+.form_content__fans {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 53px;
+    color: #B5B6B9;
+
+}
+
+.form_content__quantity-following {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 200px;
+    font-weight: 600;
+    color: #384A5C;
+}
+
+.form_content__following {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 180px;
+    color: #B5B6B9;
+}
+
+.form_content__quantity-posts {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 340px;
+    font-weight: 600;
+    color: #384A5C;
+}
+
+.form_content__posts {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 335px;
+    color: #B5B6B9;
+}
+
+.form_content_btn {
+    position: absolute;
+    width: 90%;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #24C6A1;
+    border: none;
+    color: white;
+    font-weight: 600;
+    margin-top: 100px;
+    margin-left: 20px;
+}
+
+.player {
+
+    position: relative;
+    left: 460px;
+    top: -500px;
+    height: 500px;
+    width: 870px;
+    background-image: url("assets/Layer 8.jpg.");
+    background-size: cover;
+    background-position: 100%;
+    background-repeat: no-repeat;
+}
+
+img.play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: #9CA5AB;
+}

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 406);
+/******/ 	return __webpack_require__(__webpack_require__.s = 397);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9104,30 +9104,32 @@ module.exports = function (regExp, replace) {
 /* 394 */,
 /* 395 */,
 /* 396 */,
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */,
-/* 405 */,
-/* 406 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(407);
+module.exports = __webpack_require__(398);
 
 
 /***/ }),
-/* 407 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(408);
+__webpack_require__(399);
+
+$(document).ready(function () {
+    $("#header_fix").removeClass('default');
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 20) {
+            $("#header_fix").addClass('default').fadeIn('fast');
+        } else {
+            $("#header_fix").removeClass('default').fadeIn('fast');
+        };
+    });
+});
 
 menu.onclick = function openMenu() {
     var x = document.querySelector('#myTopnav');
@@ -9140,11 +9142,11 @@ menu.onclick = function openMenu() {
 };
 
 $(document).ready(function () {
-    $(".about__astronomy__content").hide();
+    $(".about-astronomy__content").hide();
 
-    $(".about__astronomy__btn").on("click", function (e) {
+    $(".about-astronomy__btn").on("click", function (e) {
 
-        var $this = $(this).prev('.about__astronomy__content');
+        var $this = $(this).prev('.about-astronomy__content');
         var $text = $(this);
         $this.slideToggle('slow', function () {
             if ($(this).is(':visible')) {
@@ -9156,8 +9158,23 @@ $(document).ready(function () {
     });
 });
 
+$(document).ready(function () {
+
+    $("#menu_link").on("click", ".topnav__link", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $("body,html").animate({ scrollTop: top }, 1500);
+    });
+});
+
 /***/ }),
-/* 408 */
+/* 399 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

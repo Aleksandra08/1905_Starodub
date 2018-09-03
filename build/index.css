@@ -1,2 +1,17 @@
 body {
-  background: navajowhite; }
+  background: url(../assets/images/elitefon.ru-25790.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%; }
+
+.title {
+  text-align: center;
+  font-size: 50px; }
+
+.list {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  font-size: 30px; }

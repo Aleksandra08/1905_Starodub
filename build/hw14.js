@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 386);
+/******/ 	return __webpack_require__(__webpack_require__.s = 379);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9086,22 +9086,15 @@ module.exports = function (regExp, replace) {
 /* 376 */,
 /* 377 */,
 /* 378 */,
-/* 379 */,
-/* 380 */,
-/* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(387);
+module.exports = __webpack_require__(380);
 
 
 /***/ }),
-/* 387 */
+/* 380 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9109,7 +9102,7 @@ module.exports = __webpack_require__(387);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(388);
+__webpack_require__(381);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -9156,7 +9149,7 @@ var Acc = function () {
 var acc = new Acc(document.querySelector('#accord'));
 
 /***/ }),
-/* 388 */
+/* 381 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

@@ -1,1 +1,1 @@
-import './hw6.scss';
+import "./hw6.scss"

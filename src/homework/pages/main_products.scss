@@ -1,0 +1,174 @@
+.products__logo {
+  margin-left: 10%;
+  margin-top: 10%;
+  width: 128px;
+  height: 100px;
+}
+
+.products__title {
+  color: #FFFFFF;
+  font-size: 32px;
+  margin-left: 10%;
+  margin-top: 60px;
+}
+
+.products__info {
+  color: #FFFFFF;
+  width: 430px;
+  margin-top: 20px;
+  font-size: 12px;
+  margin-left: 10%;
+}
+
+.products__info_name {
+  margin-top: 15px;
+  margin-bottom: 60px;
+}
+
+.products__info_btn {
+  margin-bottom: 60px;
+}
+
+.products__img_one {
+  position: absolute;
+  height: 457px;
+  margin-top: -460px;
+  margin-left: 870px;
+}
+
+.products__img_two {
+  position: relative;
+  height: 507px;
+  margin-top: -530px;
+  margin-left: 900px;
+}
+
+.company-employees {
+  display: flex;
+  margin-top: 120px;
+}
+
+.company-employees__slider {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.company-employees__title {
+  color: #FFFFFF;
+  margin-left: 10%;
+}
+
+.company-employees__slider_img {
+  width: 250px;
+  padding: 0 15px;
+}
+
+.slider__nav {
+  width: 50px;
+  margin-top: 150px;
+}
+
+.company-employees__seo_name {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  font-size: 20px;
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+.company-employees__seo_post {
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.subscribe {
+  margin-top: 300px;
+  background-color: #00E676;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .products__info {
+    width: 90%;
+    margin-left: 5%;
+  }
+  .products__title {
+    margin-left: 5%;
+  }
+  .products__img_one {
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .products__img_two {
+    margin-left: 75px;
+    margin-top: -10px;
+  }
+  .company-employees {
+    margin-left: -25px;
+  }
+  .company-employees__seo_post, .company-employees__seo_name {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .products__info {
+    width: 40%;
+    margin-left: 5%;
+  }
+  .products__title {
+    width: 40%;
+    margin-left: 5%;
+  }
+  .products__img_one {
+    margin-left: 450px;
+    margin-top: -450px;
+  }
+  .products__img_two {
+    margin-left: 480px;
+    margin-top: -500px;
+  }
+  .company-employees {
+    margin-left: -25px;
+  }
+  .company-employees__slider {
+    margin-left: -150px;
+  }
+  .company-employees__seo_post, .company-employees__seo_name {
+    margin-left: -150px;
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+  .products__img_one {
+    margin-left: 700px;
+    margin-top: -460px;
+  }
+  .products__img_two {
+    margin-left: 720px;
+  }
+  .company-employees {
+    margin-left: -25px;
+  }
+  .company-employees__slider {
+    margin-left: -150px;
+  }
+  .company-employees__seo_post, .company-employees__seo_name {
+    margin-left: -80px;
+  }
+}
+
