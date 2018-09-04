@@ -1,4 +1,7 @@
 import './homework.scss';
+import './selectMenu/select.scss';
+
+//FIXED HEADER
 
 $(document).ready(function () {
     $("#header_fix").removeClass('default');
@@ -7,10 +10,12 @@ $(document).ready(function () {
             $("#header_fix").addClass('default').fadeIn('fast');
         } else {
             $("#header_fix").removeClass('default').fadeIn('fast');
-        };
+        }
     });
 });
 
+
+//HEADER MENU BUTTON
 
 menu.onclick = function openMenu() {
     let x = document.querySelector('#myTopnav');
@@ -22,6 +27,25 @@ menu.onclick = function openMenu() {
     }
 };
 
+
+// TRANSITION OF HEADER
+
+$(document).ready(function () {
+
+    $("#menu_link").on("click", ".topnav__link", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        let id = $(this).attr('href'),
+            //узнаем высоту от начала страницы до блока на который ссылается якорь
+            top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $("body,html").animate({scrollTop: top}, 1500);
+    });
+});
+
+
+//BUTTON IN THE MAIN BLOCK
 
 $(document).ready(function () {
     $(".about-astronomy__content").hide();
@@ -42,18 +66,9 @@ $(document).ready(function () {
 });
 
 
-$(document).ready(function(){
+//FOOTER MENU LANGUAGE
 
-    $("#menu_link").on("click",".topnav__link", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
-        //забираем идентификатор бока с атрибута href
-        let id  = $(this).attr('href'),
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
-        //анимируем переход на расстояние - top за 1500 мс
-        $("body,html").animate({scrollTop: top}, 1500);
-    });
-});
+import {Select} from './selectMenu/select.js';
 
-
+const language = ['English', 'Ukrainian', 'Russian'];
+const languagesList = new Select(document.querySelector('#languagesList'), language);

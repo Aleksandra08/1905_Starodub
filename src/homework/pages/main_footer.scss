@@ -1,0 +1,143 @@
+@import "mixins";
+
+.footer {
+  margin-top: 90px;
+}
+
+.footer-info {
+  margin-left: 10%;
+  display: flex;
+  &__language {
+    width: 130px;
+  }
+}
+
+.footer-info__menu {
+  @include menu-footer;
+  &_items {
+    @include menu-footer_items;
+  }
+}
+
+.footer-info__settings {
+  @include menu-footer;
+  &_items {
+    @include menu-footer_items;
+  }
+}
+
+.footer-info__contacts {
+  color: #FFFFFF;
+  font-size: 16px;
+  margin-left: 200px;
+}
+
+.footer-info__network {
+  display: flex;
+  width: 300px;
+  margin-left: 980px;
+  margin-bottom: 60px;
+  &_img {
+    width: 30px;
+    height: 30px;
+    padding-left: 20px;
+  }
+}
+
+.footer-title {
+  background-color: #131313;
+  height: 100px;
+  &__logo_img {
+    margin-left: 10%;
+    width: 150px;
+    padding-top: 45px;
+  }
+  &__text {
+    color: #FFFFFF;
+    margin-left: 40%;
+    margin-top: -25px;
+    font-size: 13px;
+  }
+  &__like {
+    color: #42CB29;
+    margin-left: 80%;
+    margin-top: -15px;
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+  .footer-info {
+    margin-left: 4%;
+    &__menu {
+      margin-left: 10%;
+    }
+    &__settings {
+      margin-left: 5%;
+    }
+    &__contacts {
+      margin-left: 10%;
+    }
+  }
+  .footer-info__network {
+    margin-left: 70%;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+  .footer-info {
+    margin-left: 1%;
+    &__menu {
+      margin-left: 5%;
+    }
+    &__settings {
+      margin-left: 5%;
+    }
+    &__contacts {
+      margin-left: 5%;
+    }
+  }
+  .footer-info__network {
+    margin-left: 60%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-info {
+    margin-left: 1%;
+    &__language {
+      margin-left: -7%;
+    }
+    &__menu {
+      margin-left: 0%;
+    }
+    &__settings {
+      margin-left: 2%;
+    }
+    &__contacts {
+      margin-left: 2%;
+      font-size: 12px;
+    }
+  }
+  .footer-info__network {
+    margin-left: 10%;
+    margin-top: 10%;
+  }
+
+  .footer-title {
+    &__logo_img {
+      margin-left: 5%;
+      width: 70px;
+      padding-top: 45px;
+    }
+    &__text {
+      margin-left: 27%;
+      font-size: 60%;
+      margin-top: -10%;
+    }
+    &__like {
+      margin-top: 1%;
+      margin-right: 5%;
+    }
+  }
+}

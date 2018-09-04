@@ -25,7 +25,6 @@
 .header__logo {
   margin-top: 48px;
   margin-left: 10%;
-
   &_img {
     width: 242px;
     height: 34px;
@@ -50,11 +49,13 @@
 .topnav__icon {
   display: none;
 }
+
 @media screen and (min-width: 1200px) {
   .header__menu {
     margin-left: 20%;
   }
 }
+
 @media screen and (min-width: 980px) and (max-width: 1199px) {
   .header__menu {
     margin-left: 15%;

@@ -1,0 +1,41 @@
+@import "../pages/mixins";
+
+.select {
+  position: relative;
+  width: 120px;
+  background: black;
+  &__title {
+    @include btnResetDefault;
+    padding: $option-padding;
+    width: 100%;
+    color: #FFFFFF;
+  }
+  &__options {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    width: 100%;
+    background-color: #002E16;
+    box-shadow: 0 4px 20px 0px #636363;
+    transform: scaleY(0);
+    transform-origin: top center;
+    visibility: hidden;
+    transition: all 0.5s;
+    border-radius: 3px;
+  }
+
+  &__control {
+    @include btnResetDefault;
+    width: 100%;
+    text-align: right;
+    padding: $option-padding;
+    color: #FFFFFF;
+  }
+
+  &_expand {
+    .select__options {
+      transform: scaleY(1);
+      visibility: visible;
+    }
+  }
+}
