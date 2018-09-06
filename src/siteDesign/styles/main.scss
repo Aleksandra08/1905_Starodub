@@ -1,0 +1,63 @@
+
+.top-slide {
+  background: url("../../assets/images/siteDesign/slider_bg.png") no-repeat;
+  padding-top: 120px;
+  padding-bottom: 280px;
+
+  &__container {
+    width: 85%;
+    margin: auto;
+  }
+}
+
+.top-slide:nth-child(2) {
+  margin-bottom: 10px;
+}
+
+.top-slide h2 {
+  background: #FFEA00;
+  display: inline;
+  font-size: 70px;
+  padding: 0 13px;
+}
+
+.top-slide p {
+  background: #414146;
+  display: inline;
+  font-size: 24px;
+  color: #FFFFFF;
+  padding: 0 4px;
+}
+
+.specialize__container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.specialize__container h3 {
+  font-size: 36px;
+
+}
+
+.specialize__container p {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.specialize__cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottom-card {
+  background: #414146;
+  position: relative;
+  top: -30px;
+}
+
+.bottom-card__title {
+  font-size: 20px;
+  color: #FFFFFF;
+}
