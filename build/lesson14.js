@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 372);
+/******/ 	return __webpack_require__(__webpack_require__.s = 376);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9072,7 +9072,7 @@ exports.Bulb = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(374);
+__webpack_require__(378);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -9151,15 +9151,19 @@ var Bulb = exports.Bulb = function () {
 /* 369 */,
 /* 370 */,
 /* 371 */,
-/* 372 */
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(373);
+module.exports = __webpack_require__(377);
 
 
 /***/ }),
-/* 373 */
+/* 377 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9167,11 +9171,11 @@ module.exports = __webpack_require__(373);
 
 var _bulb = __webpack_require__(352);
 
-var _garland = __webpack_require__(375);
+var _garland = __webpack_require__(379);
 
-var _select = __webpack_require__(377);
+var _select = __webpack_require__(381);
 
-__webpack_require__(379);
+__webpack_require__(383);
 
 var bulb = new _bulb.Bulb(document.querySelector('#bulb1'));
 var graland = new _garland.Garland(document.querySelector('#garland1'));
@@ -9206,13 +9210,13 @@ var countriesList = new _select.Select(document.querySelector('#countriesList'),
 // ]))
 
 /***/ }),
-/* 374 */
+/* 378 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 375 */
+/* 379 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9227,7 +9231,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 var _bulb = __webpack_require__(352);
 
-__webpack_require__(376);
+__webpack_require__(380);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -9310,13 +9314,13 @@ var Garland = exports.Garland = function () {
 }();
 
 /***/ }),
-/* 376 */
+/* 380 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 377 */
+/* 381 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9329,11 +9333,11 @@ exports.Select = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-__webpack_require__(378);
+__webpack_require__(382);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-{/* <div class="select select_expand">
+{/* <div class="selectProject select_expand">
     <button class="select__title">TITLE</button>
     <ul class="select__options">
      <li class="select__option">
@@ -9377,7 +9381,7 @@ var Select = exports.Select = function () {
             this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
             this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
 
-            this.titleElement.textContent = 'Please select...';
+            this.titleElement.textContent = 'Please selectMenu...';
             this.targetElement.appendChild(this.titleElement);
             this.targetElement.appendChild(this.listElement);
             this.targetElement.classList.add(SELECT_CLASS_NAME);
@@ -9430,13 +9434,13 @@ var Select = exports.Select = function () {
 }();
 
 /***/ }),
-/* 378 */
+/* 382 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 379 */
+/* 383 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

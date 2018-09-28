@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 397);
+/******/ 	return __webpack_require__(__webpack_require__.s = 401);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9060,7 +9060,12 @@ module.exports = function (regExp, replace) {
 /* 350 */,
 /* 351 */,
 /* 352 */,
-/* 353 */,
+/* 353 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 354 */,
 /* 355 */,
 /* 356 */,
@@ -9104,21 +9109,31 @@ module.exports = function (regExp, replace) {
 /* 394 */,
 /* 395 */,
 /* 396 */,
-/* 397 */
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(398);
+module.exports = __webpack_require__(402);
 
 
 /***/ }),
-/* 398 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(399);
+__webpack_require__(403);
+
+__webpack_require__(353);
+
+var _select = __webpack_require__(404);
+
+//FIXED HEADER
 
 $(document).ready(function () {
     $("#header_fix").removeClass('default');
@@ -9127,9 +9142,11 @@ $(document).ready(function () {
             $("#header_fix").addClass('default').fadeIn('fast');
         } else {
             $("#header_fix").removeClass('default').fadeIn('fast');
-        };
+        }
     });
 });
+
+//HEADER MENU BUTTON
 
 menu.onclick = function openMenu() {
     var x = document.querySelector('#myTopnav');
@@ -9140,6 +9157,25 @@ menu.onclick = function openMenu() {
         x.className = 'topnav';
     }
 };
+
+// TRANSITION OF HEADER
+
+$(document).ready(function () {
+
+    $("#menu_link").on("click", ".topnav__link", function (event) {
+        //отменяем стандартную обработку нажатия по ссылке
+        event.preventDefault();
+        //забираем идентификатор бока с атрибута href
+        var id = $(this).attr('href'),
+
+        //узнаем высоту от начала страницы до блока на который ссылается якорь
+        top = $(id).offset().top;
+        //анимируем переход на расстояние - top за 1500 мс
+        $("body,html").animate({ scrollTop: top }, 1500);
+    });
+});
+
+//BUTTON IN THE MAIN BLOCK
 
 $(document).ready(function () {
     $(".about-astronomy__content").hide();
@@ -9158,26 +9194,109 @@ $(document).ready(function () {
     });
 });
 
-$(document).ready(function () {
+//FOOTER MENU LANGUAGE
 
-    $("#menu_link").on("click", ".topnav__link", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
-        //забираем идентификатор бока с атрибута href
-        var id = $(this).attr('href'),
-
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
-        //анимируем переход на расстояние - top за 1500 мс
-        $("body,html").animate({ scrollTop: top }, 1500);
-    });
-});
+var language = ['English', 'Ukrainian', 'Russian'];
+var languagesList = new _select.Select(document.querySelector('#languagesList'), language);
 
 /***/ }),
-/* 399 */
+/* 403 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 404 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Select = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+__webpack_require__(353);
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var SELECT_CLASS_NAME = 'select';
+var SELECT_EXPAND_CLASS_NAME = SELECT_CLASS_NAME + '_expand';
+var SELECT_TITLE_CLASS_NAME = SELECT_CLASS_NAME + '__title';
+var SELECT_OPTIONS_CLASS_NAME = SELECT_CLASS_NAME + '__options';
+var SELECT_OPTION_CLASS_NAME = SELECT_CLASS_NAME + '__option';
+var SELECT_CONTROL_CLASS_NAME = SELECT_CLASS_NAME + '__control';
+
+var Select = exports.Select = function () {
+    function Select(target, options) {
+        _classCallCheck(this, Select);
+
+        this.targetElement = target;
+        this.options = options;
+        this.render();
+        this.renderList();
+    }
+
+    _createClass(Select, [{
+        key: 'render',
+        value: function render() {
+            var _this = this;
+
+            this.titleElement = document.createElement('button');
+            this.listElement = document.createElement('ul');
+
+            this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
+            this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
+
+            this.titleElement.textContent = 'English';
+            this.targetElement.appendChild(this.titleElement);
+            this.targetElement.appendChild(this.listElement);
+            this.targetElement.classList.add(SELECT_CLASS_NAME);
+
+            this.titleElement.addEventListener('click', function () {
+                return _this.toggle();
+            });
+        }
+    }, {
+        key: 'toggle',
+        value: function toggle() {
+            this.targetElement.classList.toggle(SELECT_EXPAND_CLASS_NAME);
+        }
+    }, {
+        key: 'select',
+        value: function select(option) {
+            this.titleElement.textContent = option;
+            this.targetElement.classList.remove(SELECT_EXPAND_CLASS_NAME);
+        }
+    }, {
+        key: 'renderList',
+        value: function renderList() {
+            var _this2 = this;
+
+            this.options.forEach(function (option) {
+                var li = document.createElement('li');
+                var button = document.createElement('button');
+
+                li.classList.add(SELECT_OPTION_CLASS_NAME);
+                button.classList.add(SELECT_CONTROL_CLASS_NAME);
+
+                button.textContent = option;
+
+                button.addEventListener('click', function () {
+                    return _this2.select(option);
+                });
+
+                li.appendChild(button);
+                _this2.listElement.appendChild(li);
+            });
+        }
+    }]);
+
+    return Select;
+}();
 
 /***/ })
 /******/ ]);
