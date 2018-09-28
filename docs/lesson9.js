@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 363);
+/******/ 	return __webpack_require__(__webpack_require__.s = 366);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9070,23 +9070,26 @@ module.exports = function (regExp, replace) {
 /* 360 */,
 /* 361 */,
 /* 362 */,
-/* 363 */
+/* 363 */,
+/* 364 */,
+/* 365 */,
+/* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(364);
+module.exports = __webpack_require__(367);
 
 
 /***/ }),
-/* 364 */
+/* 367 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(365);
+__webpack_require__(368);
 
-var _lighter = __webpack_require__(366);
+var _lighter = __webpack_require__(369);
 
 var lighterElement = document.querySelector('#lighter1');
 var lighterElement2 = document.querySelector('#lighter2');
@@ -9175,13 +9178,13 @@ box();
 // console.log(totalPrice);
 
 /***/ }),
-/* 365 */
+/* 368 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 366 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9192,7 +9195,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.lighter = lighter;
 
-__webpack_require__(367);
+__webpack_require__(370);
 
 function lighter(lighterElement) {
     var lights = lighterElement.querySelectorAll('.street-lighter__light');
@@ -9229,7 +9232,7 @@ function lighter(lighterElement) {
 function isEmpty(obj) {}
 
 /***/ }),
-/* 367 */
+/* 370 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin

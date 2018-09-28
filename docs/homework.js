@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 398);
+/******/ 	return __webpack_require__(__webpack_require__.s = 401);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9110,25 +9110,28 @@ module.exports = function (regExp, replace) {
 /* 395 */,
 /* 396 */,
 /* 397 */,
-/* 398 */
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(399);
+module.exports = __webpack_require__(402);
 
 
 /***/ }),
-/* 399 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(400);
+__webpack_require__(403);
 
 __webpack_require__(353);
 
-var _select = __webpack_require__(401);
+var _select = __webpack_require__(404);
 
 //FIXED HEADER
 
@@ -9197,13 +9200,13 @@ var language = ['English', 'Ukrainian', 'Russian'];
 var languagesList = new _select.Select(document.querySelector('#languagesList'), language);
 
 /***/ }),
-/* 400 */
+/* 403 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 401 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
