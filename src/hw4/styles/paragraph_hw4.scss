@@ -1,0 +1,42 @@
+.main-paragraph {
+    position: relative;
+    padding-top: 1.2rem;
+    height: 10rem;
+}
+
+.main-paragraph > h1 {
+    position: absolute;
+    font-weight: 400;
+    top: -10px;
+    left: 0;
+    font-size: 3.5rem;
+    font-family: Kerola-light;
+}
+
+.main-baner {
+    position: relative;
+    margin-bottom: 5rem;
+}
+
+.image > img {
+    width: 100%;
+}
+
+.main-baner-link {
+    display: block;
+    position: absolute;
+    top: 14%;
+    color: #42c5d8;
+    font-size: 0.9rem;
+}
+
+.main-baner-link_text {
+    border-bottom: 3px solid #f8f8f9;
+    transition: all 0.5s;
+    transition-property: border-bottom-color;
+}
+
+.main-baner-link_text:hover {
+    border-bottom-color: #42c5d8;
+}
+ 
