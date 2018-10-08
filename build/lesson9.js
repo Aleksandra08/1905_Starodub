@@ -9115,68 +9115,6 @@ function notificationBar() {
 
 notificationBar();
 
-function box() {
-    var boxElement1 = document.querySelector('.box__red');
-    console.log(boxElement1);
-    var boxElement2 = document.querySelector('.box__yellow');
-    console.log(boxElement2);
-    var boxElement3 = document.querySelector('.box__green');
-    console.log(boxElement3);
-
-    function toggleColor1() {
-        boxElement1.classList.toggle('box__red_active');
-    }
-
-    boxElement1.addEventListener('click', toggleColor1);
-
-    function toggleColor2() {
-        boxElement2.classList.toggle('box__yellow_active');
-    }
-
-    boxElement2.addEventListener('click', toggleColor2);
-
-    function toggleColor3() {
-
-        boxElement3.classList.toggle('box__green_active');
-    }
-
-    boxElement3.addEventListener('click', toggleColor3);
-}
-
-box();
-
-// const products = [
-//     {
-//         title: 'Test',
-//         price: '2500'
-//     },
-//     {
-//         title: 'Test',
-//         price: '2500'
-//     },
-//     {
-//         title: 'Test',
-//         price: '2500'
-//     },
-//
-// ];
-//
-// function calcTotal(arrayOffNumbers) {
-//     let total = 0;
-//     for (let i = 0; i < arrayOffNumbers.length; i++) {
-//
-//         const number = Number(arrayOffNumbers[i].price);
-//         if (isNaN(number) === false) {
-//             total += number;
-//         }
-//     }
-//     return (total);
-//
-// }
-//
-// const totalPrice = calcTotal(products);
-// console.log(totalPrice);
-
 /***/ }),
 /* 368 */
 /***/ (function(module, exports) {
@@ -9228,8 +9166,6 @@ function lighter(lighterElement) {
         _loop(i);
     }
 }
-
-function isEmpty(obj) {}
 
 /***/ }),
 /* 370 */

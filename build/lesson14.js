@@ -9182,33 +9182,6 @@ var graland = new _garland.Garland(document.querySelector('#garland1'));
 var countries = ['USA', 'UKRAINE', 'MONTENEGRO', 'FRANCE'];
 var countriesList = new _select.Select(document.querySelector('#countriesList'), countries);
 
-// const accordeon = new Accordeon(document.querySelector('#accordeonPlace', [
-//   {
-//     title: 'Section 1',
-//     text: 'sdjfbahjsdbfjhasdfasd'
-//   },
-//   {
-//     title: 'Section 2',
-//     text: 'sdjfbahjsdbfjhasdfasd'
-//   },
-//   {
-//     title: 'Section 3',
-//     text: 'sdjfbahjsdbfjhasdfasd'
-//   },
-// ]))
-
-
-// const accordeon2 = new Accordeon(document.querySelector('#accordeonPlace', [
-//   {
-//     title: 'Section 1',
-//     text: 'sdjfbahjsdbfjhasdfasd'
-//   },
-//   {
-//     title: 'Section 2',
-//     text: 'sdjfbahjsdbfjhasdfasd'
-//   },
-// ]))
-
 /***/ }),
 /* 378 */
 /***/ (function(module, exports) {
@@ -9337,18 +9310,6 @@ __webpack_require__(382);
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-{/* <div class="selectProject select_expand">
-    <button class="select__title">TITLE</button>
-    <ul class="select__options">
-     <li class="select__option">
-       <button class="select__control" type="button">IOPTION</button>
-     </li>
-     <li class="select__option">
-       <button class="select__control" type="button">IOPTION</button>
-     </li>
-    </ul>
-    </div> */}
-
 var SELECT_CLASS_NAME = 'select';
 var SELECT_EXPAND_CLASS_NAME = SELECT_CLASS_NAME + '_expand';
 var SELECT_TITLE_CLASS_NAME = SELECT_CLASS_NAME + '__title';
@@ -9381,7 +9342,7 @@ var Select = exports.Select = function () {
             this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
             this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
 
-            this.titleElement.textContent = 'Please selectMenu...';
+            this.titleElement.textContent = 'Please select Menu...';
             this.targetElement.appendChild(this.titleElement);
             this.targetElement.appendChild(this.listElement);
             this.targetElement.classList.add(SELECT_CLASS_NAME);

@@ -29,7 +29,3 @@ export function lighter(lighterElement) {
     }
 
 }
-
-function isEmpty(obj) {
-
-}

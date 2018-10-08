@@ -344,10 +344,6 @@
   width: 250px;
   padding: 0 15px; }
 
-.slider__nav {
-  width: 50px;
-  margin-top: 150px; }
-
 .company-employees__seo_name {
   color: #FFFFFF;
   display: -ms-flexbox;
@@ -380,7 +376,8 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+  max-width: 1500px; }
 
 @media screen and (max-width: 767px) {
   .products__info {
@@ -433,7 +430,8 @@
     margin-left: -80px; } }
 
 .footer {
-  margin-top: 90px; }
+  margin-top: 90px;
+  max-width: 1500px; }
 
 .footer-info {
   margin-left: 10%;
@@ -555,7 +553,8 @@
   font-family: 'Open Sans', sans-serif; }
 
 body {
-  background-color: black; }
+  background-color: black;
+  max-width: 1500px; }
 
 a {
   text-decoration: none; }
@@ -566,7 +565,8 @@ li {
 header {
   width: 100%;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  max-width: 1500px; }
 .select {
   position: relative;
   width: 120px;

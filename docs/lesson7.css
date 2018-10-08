@@ -157,7 +157,7 @@ li {
   .baner__img {
     height: 792px;
     width: 463px;
-    background-image: url(assets/images/artboard.png);
+    background-image: url(../assets/images/artboard.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain; }

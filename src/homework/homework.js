@@ -72,3 +72,30 @@ import {Select} from './selectMenu/select.js';
 
 const language = ['English', 'Ukrainian', 'Russian'];
 const languagesList = new Select(document.querySelector('#languagesList'), language);
+
+// //SLIDER  let btnLeft = document.querySelector('#gallery .companies-employees__btn .company-employees__slider_nav_left');
+//
+// let btnLeft = document.querySelector('#gallery .buttons .prev');
+// let btnRight = document.querySelector('#gallery .buttons .next');
+//
+// let images = document.querySelectorAll('#gallery .photos img');
+// let i = 0;
+//
+// btnLeft.onclick = function () {
+//     images[i].className = '';
+//     i = i--;
+//     if (i < 0) {
+//         i = images.length - 1;
+//     }
+//     images[i].className = 'showed';
+// };
+//
+//
+// btnRight.onclick = function () {
+//     images[i].className = '';
+//     i = i++;
+//     if (i >= images.length) {
+//         i = 0;
+//     }
+//     images[i].className = 'showed';
+// };

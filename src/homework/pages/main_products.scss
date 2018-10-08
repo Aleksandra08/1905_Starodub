@@ -66,10 +66,6 @@
   padding: 0 15px;
 }
 
-.slider__nav {
-  width: 50px;
-  margin-top: 150px;
-}
 
 .company-employees__seo_name {
   color: #FFFFFF;
@@ -99,6 +95,7 @@
   justify-content: space-around;
   padding-top: 50px;
   padding-bottom: 50px;
+  max-width: 1500px;
 }
 
 @media screen and (max-width: 767px) {

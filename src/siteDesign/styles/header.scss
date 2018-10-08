@@ -1,9 +1,19 @@
+header {
+  background: #F6F6F6;
+  padding: 22px 0;
+}
 
 .header-container {
   width: 90%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  transition-property: width;
+}
+
+.header-container a:hover {
+  transition-duration: 1s;
+  border-radius: 50px;
 }
 
 .header-container a {
@@ -63,5 +73,4 @@
   .header-container a {
     margin-right: -65px;
   }
-
 }

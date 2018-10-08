@@ -1,5 +1,12 @@
+body {
+  background-color: gray;
+}
 
 .notification-bar {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  border-radius: 5px;
   &__message {
     display: none;
   }

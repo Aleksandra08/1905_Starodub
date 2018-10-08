@@ -1,17 +1,5 @@
 import './select.scss';
 
-{/* <div class="selectProject select_expand">
-<button class="select__title">TITLE</button>
-<ul class="select__options">
-  <li class="select__option">
-    <button class="select__control" type="button">IOPTION</button>
-  </li>
-  <li class="select__option">
-    <button class="select__control" type="button">IOPTION</button>
-  </li>
-</ul>
-</div> */}
-
 const SELECT_CLASS_NAME = 'select';
 const SELECT_EXPAND_CLASS_NAME = `${SELECT_CLASS_NAME}_expand`;
 const SELECT_TITLE_CLASS_NAME = `${SELECT_CLASS_NAME}__title`;
@@ -38,7 +26,7 @@ export class Select {
         this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
         this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
 
-        this.titleElement.textContent = 'Please selectMenu...';
+        this.titleElement.textContent = 'Please select Menu...';
         this.targetElement.appendChild(this.titleElement);
         this.targetElement.appendChild(this.listElement);
         this.targetElement.classList.add(SELECT_CLASS_NAME);

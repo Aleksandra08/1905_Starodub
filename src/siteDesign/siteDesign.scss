@@ -1,5 +1,6 @@
 @import "styles/header";
 @import "styles/main";
+@import "styles/footerList";
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -19,12 +20,6 @@ a {
   text-decoration: none;
 }
 
-header {
-  background: #F6F6F6;
-  padding: 22px 0;
-}
-
 ul {
   display: flex;
 }
-
