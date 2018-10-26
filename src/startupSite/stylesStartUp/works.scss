@@ -1,0 +1,77 @@
+.works {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  color: #555555;
+  padding-bottom: 100px;
+}
+
+.works-content {
+  &__menu {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+  }
+  &__link {
+    color: #555555;
+    font-weight: bold;
+    font-size: 17px;
+    padding-left: 20px;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+}
+
+.works-content__link:hover {
+  color: #862E1E;
+}
+
+.works__posts {
+  display: grid;
+  width: 50%;
+  margin: 0 auto;
+  grid-template-columns: auto auto auto;
+  grid-gap: 15px;
+}
+
+.post img {
+  width: 100%;
+}
+
+.connection {
+  background-image: url("../../assets/startup/hj.png");
+  background-size: cover;
+  background-position: center center;
+  color: $color-title;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.connection__title {
+  margin-top: 100px;
+  line-height: 2;
+  font-weight: 100;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .works-content__menu {
+    display: block;
+  }
+  .works__posts {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .works__posts .post:nth-child(9) {
+    display: grid;
+    grid-column: 1/3;
+  }
+  .connection__title {
+    font-size: 130%;
+  }
+}

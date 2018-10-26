@@ -1,0 +1,129 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  color: #555555;
+}
+
+.information__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+  width: 100%;
+  &_line {
+    width: 50px;
+    margin-top: 5px;
+    border: 1px solid #555555;
+  }
+  &_content {
+    margin: 25px 0 75px 0;
+  }
+}
+
+.services-kind {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    margin-bottom: 100px;
+    &_title {
+      font-weight: bold;
+      font-size: 15px;
+      margin: 5px 0 10px 0;
+    }
+    &_content {
+      padding: 0 10px 0 10px;
+      text-align: center;
+      line-height: 2;
+    }
+  }
+}
+
+.services-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #E3E3E3;
+  color: #555555;
+  padding-bottom: 50px;
+  &__block {
+    display: flex;
+    width: 85%;
+    &_content {
+      padding: 0 15px 50px 15px;
+      line-height: 1.5;
+    }
+  }
+}
+
+#gallery {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+#gallery .services-about__photos img {
+  width: 22%;
+  opacity: 0.2;
+  transition: opacity 1s;
+}
+
+#gallery .services-about__photos img.showed {
+  opacity: 1;
+}
+
+.services-about__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.prev, .next {
+  width: 50px;
+  height: 30px;
+  background-color: rgba(85, 85, 85, 0.5);
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  color: #555555;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .services-kind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    &__block {
+      margin-bottom: 10%;
+    }
+  }
+  .services-about {
+    &__block {
+      display: flex;
+      flex-direction: column;
+    }
+    &__buttons {
+      width: 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .information__title {
+    margin-top: 10%;
+    &_content {
+      text-align: center;
+      margin-bottom: 10%;
+    }
+  }
+}
