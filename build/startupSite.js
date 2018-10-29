@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 401);
+/******/ 	return __webpack_require__(__webpack_require__.s = 411);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -9060,12 +9060,7 @@ module.exports = function (regExp, replace) {
 /* 350 */,
 /* 351 */,
 /* 352 */,
-/* 353 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
+/* 353 */,
 /* 354 */,
 /* 355 */,
 /* 356 */,
@@ -9113,217 +9108,117 @@ module.exports = function (regExp, replace) {
 /* 398 */,
 /* 399 */,
 /* 400 */,
-/* 401 */
+/* 401 */,
+/* 402 */,
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */,
+/* 411 */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(125);
-module.exports = __webpack_require__(402);
+module.exports = __webpack_require__(412);
 
 
 /***/ }),
-/* 402 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(403);
+__webpack_require__(413);
 
-__webpack_require__(353);
+// HEADER MENU
 
-var _select = __webpack_require__(404);
-
-//FIXED HEADER
-
-$(document).ready(function () {
-    $("#header_fix").removeClass('default');
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 20) {
-            $("#header_fix").addClass('default').fadeIn('fast');
-        } else {
-            $("#header_fix").removeClass('default').fadeIn('fast');
-        }
-    });
+var menu = document.querySelector('#menu');
+var btn = document.querySelector('#button');
+console.log(btn);
+btn.addEventListener('click', function () {
+    menu.classList.toggle('page-nav_expand');
 });
 
-//HEADER MENU BUTTON
+//slider ABOUT
 
-menu.onclick = function openMenu() {
-    var x = document.querySelector('#myTopnav');
+var btn_ptev = document.querySelector('#gallery .services-about__buttons .prev');
+var btn_next = document.querySelector('#gallery .services-about__buttons .next');
 
-    if (x.className === 'topnav') {
-        x.className += ' responsive';
-    } else {
-        x.className = 'topnav';
+var images = document.querySelectorAll('#gallery .services-about__photos img');
+var i = 0;
+
+btn_ptev.onclick = function () {
+    images[i].className = '';
+    i--;
+
+    if (i < 0) {
+        i = images.length - 1;
     }
+
+    images[i].className = 'showed';
 };
 
-// TRANSITION OF HEADER
+btn_next.onclick = function () {
+    images[i].className = '';
+    i++;
+    if (i >= images.length) {
+        i = 0;
+    }
+    images[i].className = 'showed';
+};
 
-$(document).ready(function () {
+//slider SPONSORS
 
-    $("#menu_link").on("click", ".topnav__link", function (event) {
-        //отменяем стандартную обработку нажатия по ссылке
-        event.preventDefault();
-        //забираем идентификатор бока с атрибута href
-        var id = $(this).attr('href'),
+var btn_sponsr_ptev = document.querySelector('#sponsor-gallery .sponsor-slider__buttons .sponsor-slider__buttons_prev');
+var btn__sponsor_next = document.querySelector('#sponsor-gallery .sponsor-slider__buttons .sponsor-slider__buttons_next');
 
-        //узнаем высоту от начала страницы до блока на который ссылается якорь
-        top = $(id).offset().top;
-        //анимируем переход на расстояние - top за 1500 мс
-        $("body,html").animate({ scrollTop: top }, 1500);
+var images_sponsor = document.querySelectorAll('#sponsor-gallery .sponsor-slider__photos img');
+var y = 0;
+
+btn_sponsr_ptev.onclick = function () {
+    images_sponsor[y].className = '';
+    y--;
+
+    if (y < 0) {
+        y = images_sponsor.length - 1;
+    }
+
+    images_sponsor[y].className = 'showed';
+};
+
+btn__sponsor_next.onclick = function () {
+    images_sponsor[y].className = '';
+    y++;
+    if (y >= images_sponsor.length) {
+        y = 0;
+    }
+    images_sponsor[y].className = 'showed';
+};
+
+// slider WORKS
+
+$(function () {
+    $('.works-content__menu button').click(function () {
+        var get_id = this.id;
+        var get_current = $('.works__posts .' + get_id);
+
+        $('.post').not(get_current).hide(500);
+        get_current.show(500);
+    });
+    $('#all').click(function () {
+        $('.post').show(500);
     });
 });
-
-//BUTTON IN THE MAIN BLOCK
-
-$(document).ready(function () {
-    $(".about-astronomy__content").hide();
-
-    $(".about-astronomy__btn").on("click", function (e) {
-
-        var $this = $(this).prev('.about-astronomy__content');
-        var $text = $(this);
-        $this.slideToggle('slow', function () {
-            if ($(this).is(':visible')) {
-                $text.text('LESS INFO');
-            } else {
-                $text.text('LEARN MORE');
-            }
-        });
-    });
-});
-
-//FOOTER MENU LANGUAGE
-
-var language = ['English', 'Ukrainian', 'Russian'];
-var languagesList = new _select.Select(document.querySelector('#languagesList'), language);
-
-// //SLIDER  let btnLeft = document.querySelector('#gallery .companies-employees__btn .company-employees__slider_nav_left');
-//
-// let btnLeft = document.querySelector('#gallery .buttons .prev');
-// let btnRight = document.querySelector('#gallery .buttons .next');
-//
-// let images = document.querySelectorAll('#gallery .photos img');
-// let i = 0;
-//
-// btnLeft.onclick = function () {
-//     images[i].className = '';
-//     i = i--;
-//     if (i < 0) {
-//         i = images.length - 1;
-//     }
-//     images[i].className = 'showed';
-// };
-//
-//
-// btnRight.onclick = function () {
-//     images[i].className = '';
-//     i = i++;
-//     if (i >= images.length) {
-//         i = 0;
-//     }
-//     images[i].className = 'showed';
-// };
 
 /***/ }),
-/* 403 */
+/* 413 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 404 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.Select = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-__webpack_require__(353);
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var SELECT_CLASS_NAME = 'select';
-var SELECT_EXPAND_CLASS_NAME = SELECT_CLASS_NAME + '_expand';
-var SELECT_TITLE_CLASS_NAME = SELECT_CLASS_NAME + '__title';
-var SELECT_OPTIONS_CLASS_NAME = SELECT_CLASS_NAME + '__options';
-var SELECT_OPTION_CLASS_NAME = SELECT_CLASS_NAME + '__option';
-var SELECT_CONTROL_CLASS_NAME = SELECT_CLASS_NAME + '__control';
-
-var Select = exports.Select = function () {
-    function Select(target, options) {
-        _classCallCheck(this, Select);
-
-        this.targetElement = target;
-        this.options = options;
-        this.render();
-        this.renderList();
-    }
-
-    _createClass(Select, [{
-        key: 'render',
-        value: function render() {
-            var _this = this;
-
-            this.titleElement = document.createElement('button');
-            this.listElement = document.createElement('ul');
-
-            this.titleElement.classList.add(SELECT_TITLE_CLASS_NAME);
-            this.listElement.classList.add(SELECT_OPTIONS_CLASS_NAME);
-
-            this.titleElement.textContent = 'English';
-            this.targetElement.appendChild(this.titleElement);
-            this.targetElement.appendChild(this.listElement);
-            this.targetElement.classList.add(SELECT_CLASS_NAME);
-
-            this.titleElement.addEventListener('click', function () {
-                return _this.toggle();
-            });
-        }
-    }, {
-        key: 'toggle',
-        value: function toggle() {
-            this.targetElement.classList.toggle(SELECT_EXPAND_CLASS_NAME);
-        }
-    }, {
-        key: 'select',
-        value: function select(option) {
-            this.titleElement.textContent = option;
-            this.targetElement.classList.remove(SELECT_EXPAND_CLASS_NAME);
-        }
-    }, {
-        key: 'renderList',
-        value: function renderList() {
-            var _this2 = this;
-
-            this.options.forEach(function (option) {
-                var li = document.createElement('li');
-                var button = document.createElement('button');
-
-                li.classList.add(SELECT_OPTION_CLASS_NAME);
-                button.classList.add(SELECT_CONTROL_CLASS_NAME);
-
-                button.textContent = option;
-
-                button.addEventListener('click', function () {
-                    return _this2.select(option);
-                });
-
-                li.appendChild(button);
-                _this2.listElement.appendChild(li);
-            });
-        }
-    }]);
-
-    return Select;
-}();
 
 /***/ })
 /******/ ]);
