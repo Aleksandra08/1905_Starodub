@@ -9,7 +9,7 @@ li {
   color: #11100E;
   text-align: center;
   font-size: 25px;
-  animation-name: shadow, move;
+  animation-name: shadow;
   animation-duration: 3s, 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out; }
@@ -23,12 +23,10 @@ li {
       flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  font-size: 30px; }
+  font-size: 20px;
+  padding: 0; }
   .list__name a {
     color: white; }
-
-.list__name a:hover {
-  font-size: 40px; }
 
 @keyframes shadow {
   from {
@@ -37,11 +35,3 @@ li {
     text-shadow: 0 0 50px white; }
   to {
     text-shadow: 0 0 10px gray; } }
-
-@keyframes move {
-  from {
-    top: 200px;
-    left: 200px; }
-  to {
-    top: 400px;
-    left: 600px; } }
